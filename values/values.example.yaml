@@ -1,0 +1,9 @@
+global:
+  suseObservability:
+    license: "REPLACE_WITH_SUSE_OBSERVABILITY_REGCODE"
+    baseUrl: "https://observability.localhost"
+    rancherUrl: "https://rancher.localhost"
+    sizing:
+      profile: "10-nonha"
+    adminPassword: "REPLACE_WITH_ADMIN_PASSWORD"
+    receiverApiKey: "REPLACE_WITH_RECEIVER_API_KEY"

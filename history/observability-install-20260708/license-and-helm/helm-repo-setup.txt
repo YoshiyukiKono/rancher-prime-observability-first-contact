@@ -1,0 +1,22 @@
+# SUSE Observability Helm repository setup
+
+Generated at: 2026年 7月 8日 水曜日 15時19分55秒 JST
+
+## Add repo
+"suse-observability" already exists with the same configuration, skipping
+
+## Update repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "rancher-prime" chart repository
+...Successfully got an update from the "suse-observability" chart repository
+...Successfully got an update from the "racher-stable" chart repository
+...Successfully got an update from the "jetstack" chart repository
+...Successfully got an update from the "rancher-stable" chart repository
+...Successfully got an update from the "rancher-latest" chart repository
+Update Complete. ⎈Happy Helming!⎈
+
+## Search chart
+NAME                                        	CHART VERSION	APP VERSION	DESCRIPTION                                       
+suse-observability/suse-observability       	2.10.2       	2.10.2     	Helm chart for SUSE Observability                 
+suse-observability/suse-observability-agent 	1.5.10       	3.78.2     	Helm chart for the SUSE observability Agent.      
+suse-observability/suse-observability-values	1.4.10       	1.0.0      	Helm Chart for rendering SUSE Observability Values

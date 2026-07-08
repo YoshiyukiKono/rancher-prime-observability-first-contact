@@ -2,3 +2,6 @@
 *.secret.yaml
 .env
 history/**/secrets/
+values/values.local.yaml
+values/*.secret.yaml
+.env
