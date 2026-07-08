@@ -1,0 +1,19 @@
+Name:          data-suse-observability-clickhouse-shard0-0
+Namespace:     suse-observability
+StorageClass:  local-path
+Status:        Pending
+Volume:        
+Labels:        app.kubernetes.io/component=clickhouse
+               app.kubernetes.io/instance=suse-observability
+               app.kubernetes.io/name=clickhouse
+Annotations:   <none>
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:      
+Access Modes:  
+VolumeMode:    Filesystem
+Used By:       suse-observability-clickhouse-shard0-0
+Events:
+  Type    Reason                Age                    From                         Message
+  ----    ------                ----                   ----                         -------
+  Normal  WaitForFirstConsumer  7m59s                  persistentvolume-controller  waiting for first consumer to be created before binding
+  Normal  WaitForPodScheduled   117s (x25 over 7m57s)  persistentvolume-controller  waiting for pod suse-observability-clickhouse-shard0-0 to be scheduled

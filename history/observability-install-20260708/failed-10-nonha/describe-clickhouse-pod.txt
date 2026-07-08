@@ -1,0 +1,133 @@
+Name:             suse-observability-clickhouse-shard0-0
+Namespace:        suse-observability
+Priority:         0
+Service Account:  suse-observability-clickhouse
+Node:             <none>
+Labels:           app.kubernetes.io/component=clickhouse
+                  app.kubernetes.io/instance=suse-observability
+                  app.kubernetes.io/managed-by=Helm
+                  app.kubernetes.io/name=clickhouse
+                  app.kubernetes.io/version=23.7.4
+                  apps.kubernetes.io/pod-index=0
+                  controller-revision-hash=suse-observability-clickhouse-shard0-699665c7b8
+                  helm.sh/chart=clickhouse-3.6.9
+                  shard=0
+                  statefulset.kubernetes.io/pod-name=suse-observability-clickhouse-shard0-0
+Annotations:      ad.stackstate.com/clickhouse.check_names: ["openmetrics"]
+                  ad.stackstate.com/clickhouse.init_configs: [{}]
+                  ad.stackstate.com/clickhouse.instances:
+                    [ { "prometheus_url": "http://%%host%%:8001/metrics", "namespace": "stackstate", "metrics": ["ClickHouseAsyncMetrics_*", "ClickHouseMetric...
+                  checksum/config: ff75bd68dc3744dc451afa5f7aeed37d3505a134dd939030e8c8aad1490e3c74
+                  checksum/config-extra: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+                  checksum/config-users-extra: 8f144d9e0e99a86b4f1fb5957f06e6101b35e22d7127903944fafa6dd3f2bb4c
+                  prometheus.io/port: 8001
+                  prometheus.io/scrape: true
+Status:           Pending
+SeccompProfile:   RuntimeDefault
+IP:               
+IPs:              <none>
+Controlled By:    StatefulSet/suse-observability-clickhouse-shard0
+Containers:
+  clickhouse:
+    Image:       registry.rancher.com/suse-observability/clickhouse:25.9.6-so3
+    Ports:       8123/TCP (http), 9000/TCP (tcp), 9005/TCP (tcp-postgresql), 9004/TCP (tcp-mysql), 9009/TCP (http-intersrv), 8001/TCP (http-metrics)
+    Host Ports:  0/TCP (http), 0/TCP (tcp), 0/TCP (tcp-postgresql), 0/TCP (tcp-mysql), 0/TCP (http-intersrv), 0/TCP (http-metrics)
+    Command:
+      /scripts/setup.sh
+    Limits:
+      cpu:     1
+      memory:  4Gi
+    Requests:
+      cpu:      500m
+      memory:   4Gi
+    Liveness:   http-get http://:http/ping delay=10s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/ping delay=10s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      BITNAMI_DEBUG:                     false
+      CLICKHOUSE_HTTP_PORT:              8123
+      CLICKHOUSE_TCP_PORT:               9000
+      CLICKHOUSE_MYSQL_PORT:             9004
+      CLICKHOUSE_POSTGRESQL_PORT:        9005
+      CLICKHOUSE_INTERSERVER_HTTP_PORT:  9009
+      CLICKHOUSE_METRICS_PORT:           8001
+      CLICKHOUSE_ADMIN_USER:             admin
+      CLICKHOUSE_SHARD_ID:               shard0
+      CLICKHOUSE_REPLICA_ID:             suse-observability-clickhouse-shard0-0 (v1:metadata.name)
+      CLICKHOUSE_ADMIN_PASSWORD:         <set to the key 'admin-password' in secret 'suse-observability-clickhouse'>  Optional: false
+    Mounts:
+      /app/post_restore.sh from clickhouse-backup-scripts (rw,path="post_restore.sh")
+      /bitnami/clickhouse from data (rw)
+      /bitnami/clickhouse/etc/conf.d/default from config (rw)
+      /bitnami/clickhouse/etc/users.d/users-extra-configmap from users-extra-config (rw)
+      /scripts/setup.sh from scripts (rw,path="setup.sh")
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-jtmg7 (ro)
+  backup:
+    Image:           registry.rancher.com/suse-observability/clickhouse-backup:2.7.2-so1
+    Ports:           9746/TCP (supercronic), 7171/TCP (backup-api)
+    Host Ports:      0/TCP (supercronic), 0/TCP (backup-api)
+    SeccompProfile:  RuntimeDefault
+    Command:
+      /app/entrypoint.sh
+    Limits:
+      cpu:     100m
+      memory:  250Mi
+    Requests:
+      cpu:     50m
+      memory:  250Mi
+    Environment:
+      BACKUP_CLICKHOUSE_ENABLED:  <set to the key 'backup_enabled' of config map 'suse-observability-clickhouse-backup'>  Optional: false
+      BACKUP_TABLES:              otel.*
+      CLICKHOUSE_REPLICA_ID:      suse-observability-clickhouse-shard0-0 (v1:metadata.name)
+      S3_ACCESS_KEY:              <set to the key 'accesskey' in secret 'suse-observability-s3proxy'>  Optional: false
+      S3_SECRET_KEY:              <set to the key 'secretkey' in secret 'suse-observability-s3proxy'>  Optional: false
+    Mounts:
+      /app/entrypoint.sh from clickhouse-backup-scripts (rw,path="entrypoint.sh")
+      /bitnami/clickhouse from data (rw)
+      /bitnami/clickhouse/etc/conf.d/default from config (rw)
+      /bitnami/clickhouse/etc/users.d/users-extra-configmap from users-extra-config (rw)
+      /etc/clickhouse-backup.yaml from clickhouse-backup-config (rw,path="config.yaml")
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-jtmg7 (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  data:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  data-suse-observability-clickhouse-shard0-0
+    ReadOnly:   false
+  scripts:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      suse-observability-clickhouse-scripts
+    Optional:  false
+  config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      suse-observability-clickhouse
+    Optional:  false
+  users-extra-config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      suse-observability-clickhouse-users-extra
+    Optional:  false
+  clickhouse-backup-config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      suse-observability-clickhouse-backup
+    Optional:  false
+  clickhouse-backup-scripts:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      suse-observability-clickhouse-backup
+    Optional:  false
+  kube-api-access-jtmg7:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age                    From               Message
+  ----     ------            ----                   ----               -------
+  Warning  FailedScheduling  7m58s                  default-scheduler  0/1 nodes are available: 1 Insufficient cpu, 1 Insufficient memory. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+  Warning  FailedScheduling  7m55s (x2 over 7m56s)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu, 1 Insufficient memory. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+  Warning  FailedScheduling  6m14s (x2 over 7m20s)  default-scheduler  0/1 nodes are available: 1 Insufficient memory. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.

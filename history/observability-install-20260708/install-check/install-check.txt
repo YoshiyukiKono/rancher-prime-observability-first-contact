@@ -1,0 +1,310 @@
+# SUSE Observability install check
+
+Generated at: 2026年 7月 8日 水曜日 15時29分50秒 JST
+
+## Helm status
+NAME: suse-observability
+LAST DEPLOYED: Wed Jul  8 15:28:31 2026
+NAMESPACE: suse-observability
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+RESOURCES:
+==> v1/ServiceAccount
+NAME                            AGE
+suse-observability-clickhouse   79s
+suse-observability-hbase-console   79s
+suse-observability-hbase-hbase   79s
+suse-observability-hbase-hdfs   79s
+suse-observability-hbase-tephra   79s
+suse-observability-kafka   79s
+suse-observability-kafkaup-operator-kafkaup   79s
+suse-observability-rbac-agent   79s
+suse-observability-otel-collector   79s
+suse-observability-victoria-metrics-0   79s
+suse-observability-router   79s
+suse-observability-s3proxy   79s
+suse-observability-server   79s
+suse-observability-workload-observer   79s
+
+==> v1/ConfigMap
+NAME                                           DATA   AGE
+suse-observability-clickhouse-backup-scripts   2      79s
+suse-observability-clickhouse-backup   4     79s
+suse-observability-clickhouse-users-extra   1     79s
+suse-observability-clickhouse   1     79s
+suse-observability-clickhouse-scripts   1     79s
+suse-observability-kafka-jmx-configuration   1     79s
+suse-observability-kafka-scripts   2     79s
+suse-observability-kafkaup-operator-kafkaup-config   1     79s
+suse-observability-rbac-agent-cluster-name   1     79s
+suse-observability-rbac-agent-url   1     79s
+suse-observability-otel-collector-statefulset   1     79s
+suse-observability-victoria-metrics-0-scripts   1     79s
+suse-observability-zookeeper   1     79s
+suse-observability-zookeeper-scripts   2     79s
+suse-observability-backup-config   1     79s
+suse-observability-backup-log   1     79s
+suse-observability-backup-restore-scripts   25    79s
+suse-observability-sts-backup-conf   1     79s
+suse-observability-correlate-log   1     79s
+suse-observability-correlate   1     79s
+suse-observability-e2es-log   1     79s
+suse-observability-e2es   1     79s
+suse-observability-otel-collector   2     79s
+suse-observability-receiver-log   1     79s
+suse-observability-receiver   1     79s
+suse-observability-router-active   2     79s
+suse-observability-router   1     79s
+suse-observability-s3proxy-config   1     79s
+suse-observability-server-log   1     79s
+suse-observability-server   1     79s
+suse-observability-vmagent   1     79s
+
+==> v1/ClusterRoleBinding
+NAME                                               ROLE                                                           AGE
+suse-observability-suse-observability-rbac-agent   ClusterRole/suse-observability-suse-observability-rbac-agent   78s
+suse-observability-authentication   ClusterRole/system:auth-delegator   78s
+suse-observability-authorization   ClusterRole/suse-observability-authorization   78s
+
+==> v1/Role
+NAME                             CREATED AT
+suse-observability-hbase-hbase   2026-07-08T06:28:33Z
+suse-observability-kafkaup-operator-kafkaup   2026-07-08T06:28:33Z
+suse-observability-get-pods   2026-07-08T06:28:33Z
+suse-observability-rbac-agent   2026-07-08T06:28:33Z
+suse-observability-instance-admin   2026-07-08T06:28:33Z
+suse-observability-instance-basic-access   2026-07-08T06:28:33Z
+suse-observability-instance-observer   2026-07-08T06:28:33Z
+suse-observability-instance-recommended-access   2026-07-08T06:28:33Z
+suse-observability-instance-troubleshooter   2026-07-08T06:28:33Z
+suse-observability-workload-observer   2026-07-08T06:28:33Z
+
+==> v1/Pod(related)
+NAME                                                              READY   STATUS    RESTARTS   AGE
+suse-observability-prometheus-elasticsearch-exporter-69b97b2l9r   1/1     Running   0          78s
+suse-observability-kafkaup-operator-kafkaup-755458dcd4-zv6wq   1/1   Running   0     78s
+suse-observability-rbac-agent-549c4dd7b9-5tjz7   1/1   Running   0     78s
+suse-observability-correlate-c9fdd66b-8bvpp   0/1   Init:0/1   0     78s
+suse-observability-e2es-847d5bc64d-lh6kz   0/1   Init:0/1   0     78s
+suse-observability-receiver-95688b86f-r4rxs   0/1   Init:0/1   0     78s
+suse-observability-router-6c7dc68b69-ztv46   0/1   Running   0     78s
+suse-observability-s3proxy-59d7f9c655-82ts5   0/1   Init:0/1   0     78s
+suse-observability-server-6784b96cd-vkx7t   0/1   Pending   0     78s
+suse-observability-ui-69fdb9549b-xj7qn   1/2   ImagePullBackOff   0     78s
+suse-observability-clickhouse-shard0-0   0/2   Pending   0     77s
+suse-observability-elasticsearch-master-0   0/1   Init:0/1   0     78s
+suse-observability-hbase-stackgraph-0   0/1   PodInitializing   0     78s
+suse-observability-hbase-tephra-mono-0   0/1   Init:0/1   0     78s
+suse-observability-kafka-0   0/2   Pending   0     44s
+suse-observability-otel-collector-0   0/1   Init:0/1   0     79s
+suse-observability-victoria-metrics-0-0   0/1   ContainerCreating   0     78s
+suse-observability-zookeeper-0   0/1   ContainerCreating   0     79s
+suse-observability-vmagent-0   0/1   Init:0/1   0     79s
+suse-observability-workload-observer-0   1/1   Running   0     79s
+
+==> v1/StatefulSet
+NAME                                   READY   AGE
+suse-observability-clickhouse-shard0   0/1     78s
+suse-observability-elasticsearch-master   0/1   78s
+suse-observability-hbase-stackgraph   0/1   79s
+suse-observability-hbase-tephra-mono   0/1   79s
+suse-observability-kafka   0/1   79s
+suse-observability-otel-collector   0/1   79s
+suse-observability-victoria-metrics-0   0/1   79s
+suse-observability-zookeeper   0/1   79s
+suse-observability-vmagent   0/1   79s
+suse-observability-workload-observer   1/1   79s
+
+==> v1/Job
+NAME                                    STATUS    COMPLETIONS   DURATION   AGE
+suse-observability-init-pvc-08t152832   Running   0/1           79s        79s
+suse-observability-topic-create-08t152832   Running   0/1   79s   79s
+
+==> v1/PodDisruptionBudget
+NAME                                          MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+suse-observability-elasticsearch-master-pdb   N/A             1                 0                     79s
+suse-observability-hbase-tephra   N/A   1     0     79s
+suse-observability-correlate   N/A   1     0     79s
+suse-observability-e2es   N/A   1     0     79s
+suse-observability-receiver   N/A   1     0     79s
+suse-observability-router   N/A   1     0     79s
+suse-observability-server   N/A   1     0     79s
+suse-observability-ui   N/A   1     0     79s
+suse-observability-vmagent   N/A   1     0     79s
+suse-observability-workload-observer   N/A   1     1     79s
+
+==> v1/Secret
+NAME                            TYPE     DATA   AGE
+suse-observability-clickhouse   Opaque   1      79s
+suse-observability-rbac-agent-pull-secret   kubernetes.io/dockerconfigjson   1     79s
+suse-observability-backup-config   Opaque   1     79s
+suse-observability-correlate   Opaque   0     79s
+suse-observability-e2es   Opaque   0     79s
+suse-observability-auth   Opaque   1     79s
+suse-observability-common   Opaque   0     79s
+suse-observability-license   Opaque   1     79s
+suse-observability-receiver   Opaque   0     79s
+suse-observability-s3proxy   Opaque   2     79s
+suse-observability-server   Opaque   0     79s
+
+==> v1/PersistentVolumeClaim
+NAME                                      STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+suse-observability-settings-backup-data   Bound    pvc-3cac0b1c-834b-49aa-8655-686dbaf167b5   1Gi        RWO            local-path     <unset>                 78s
+suse-observability-stackpacks-local   Pending                     local-path   <unset>   78s
+suse-observability-stackpacks   Pending                     local-path   <unset>   78s
+suse-observability-backup-settings-data   Bound   pvc-6c6da67a-b12a-4db3-ab2c-bf9275a23322   2Gi   RWO   local-path   <unset>   78s
+
+==> v1/CronJob
+NAME                             SCHEDULE    TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+suse-observability-backup-conf   0 4 * * *   <none>     False     0        <none>          79s
+
+==> v1/ClusterRole
+NAME                                               CREATED AT
+suse-observability-suse-observability-rbac-agent   2026-07-08T06:28:33Z
+suse-observability-authorization   2026-07-08T06:28:33Z
+
+==> v1/RoleBinding
+NAME                             ROLE                                  AGE
+suse-observability-hbase-hbase   Role/suse-observability-hbase-hbase   78s
+suse-observability-kafkaup-operator-kafkaup-binding   Role/suse-observability-kafkaup-operator-kafkaup   78s
+suse-observability-get-pods   Role/suse-observability-get-pods   78s
+suse-observability-rbac-agent   Role/suse-observability-rbac-agent   78s
+suse-observability-instance-admin   Role/suse-observability-instance-admin   78s
+suse-observability-instance-basic-access   Role/suse-observability-instance-basic-access   78s
+suse-observability-instance-observer   Role/suse-observability-instance-observer   78s
+suse-observability-instance-recommended-access   Role/suse-observability-instance-recommended-access   78s
+suse-observability-instance-troubleshooter   Role/suse-observability-instance-troubleshooter   78s
+suse-observability-workload-observer   Role/suse-observability-workload-observer   78s
+
+==> v1/Service
+NAME                                     TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                                        AGE
+suse-observability-clickhouse-headless   ClusterIP   None         <none>        8123/TCP,9000/TCP,9004/TCP,9005/TCP,9009/TCP   78s
+suse-observability-clickhouse   ClusterIP   10.43.17.219   <none>   8123/TCP,9000/TCP,9004/TCP,9005/TCP,9009/TCP,8001/TCP   78s
+suse-observability-prometheus-elasticsearch-exporter   ClusterIP   10.43.51.40   <none>   9108/TCP   78s
+suse-observability-elasticsearch-master   ClusterIP   10.43.32.77   <none>   9200/TCP,9300/TCP   78s
+suse-observability-elasticsearch-master-headless   ClusterIP   None   <none>   9200/TCP,9300/TCP   78s
+suse-observability-hbase-stackgraph   ClusterIP   None   <none>   10125/TCP,10126/TCP,10021/TCP,2182/TCP,60001/TCP,60011/TCP,60021/TCP,60031/TCP,9404/TCP   78s
+suse-observability-hbase-tephra   ClusterIP   None   <none>   15165/TCP,9404/TCP   78s
+suse-observability-kafka-jmx-metrics   ClusterIP   10.43.170.79   <none>   5556/TCP   78s
+suse-observability-kafka-headless   ClusterIP   None   <none>   9092/TCP,9093/TCP   78s
+suse-observability-kafka   ClusterIP   10.43.18.139   <none>   9092/TCP   78s
+suse-observability-otel-collector-grpc   ClusterIP   10.43.238.179   <none>   4317/TCP   78s
+suse-observability-otel-collector   ClusterIP   10.43.116.208   <none>   8888/TCP,4317/TCP,4318/TCP   78s
+suse-observability-victoria-metrics-0   ClusterIP   None   <none>   8428/TCP   78s
+suse-observability-zookeeper-metrics   ClusterIP   10.43.114.46   <none>   9141/TCP   78s
+suse-observability-zookeeper-headless   ClusterIP   None   <none>   2181/TCP,2888/TCP,3888/TCP   78s
+suse-observability-zookeeper   ClusterIP   10.43.158.7   <none>   2181/TCP,2888/TCP,3888/TCP   78s
+suse-observability-correlate   ClusterIP   None   <none>   9404/TCP   78s
+suse-observability-e2es   ClusterIP   None   <none>   9404/TCP   78s
+suse-observability-backup-stackpacks   ClusterIP   None   <none>   7090/TCP   78s
+suse-observability-victoriametrics   ClusterIP   None   <none>   8428/TCP   78s
+suse-observability-receiver   ClusterIP   10.43.96.112   <none>   7077/TCP,9404/TCP   78s
+suse-observability-router   ClusterIP   10.43.211.213   <none>   8080/TCP,8001/TCP   78s
+suse-observability-s3proxy   ClusterIP   10.43.174.249   <none>   9000/TCP   78s
+suse-observability-server-headless   ClusterIP   None   <none>   7070/TCP,9404/TCP,7075/TCP   78s
+suse-observability-ui   ClusterIP   10.43.54.113   <none>   8080/TCP,9113/TCP   78s
+suse-observability-vmagent   ClusterIP   None   <none>   8429/TCP   78s
+
+==> v1/Deployment
+NAME                                                   READY   UP-TO-DATE   AVAILABLE   AGE
+suse-observability-prometheus-elasticsearch-exporter   1/1     1            1           78s
+suse-observability-hbase-console   0/0   0     0     78s
+suse-observability-kafkaup-operator-kafkaup   1/1   1     1     78s
+suse-observability-rbac-agent   1/1   1     1     78s
+suse-observability-correlate   0/1   1     0     78s
+suse-observability-e2es   0/1   1     0     78s
+suse-observability-receiver   0/1   1     0     78s
+suse-observability-router   0/1   1     0     78s
+suse-observability-s3proxy   0/1   1     0     78s
+suse-observability-server   0/1   1     0     78s
+suse-observability-ui   0/1   1     0     78s
+
+
+TEST SUITE: None
+NOTES:
+=============================================================================
+SUSE Observability Installation (Simplified Configuration Mode)
+=============================================================================
+
+Simplified configuration mode is active (auto-detected from global.suseObservability.* values).
+
+Configuration Summary:
+  • Base URL: https://observability.localhost
+  • License: ✓ Configured
+  • Admin Password: ✓ Configured
+  • Sizing Profile: 10-nonha ✓
+
+For more information, visit: https://documentation.suse.com/cloudnative/suse-observability/latest/en/k8s-quick-start-guide.html
+
+## Pods
+NAME                                                              READY   STATUS              RESTARTS   AGE   IP            NODE                   NOMINATED NODE   READINESS GATES
+suse-observability-clickhouse-shard0-0                            0/2     Pending             0          78s   <none>        <none>                 <none>           <none>
+suse-observability-correlate-c9fdd66b-8bvpp                       0/1     Init:0/1            0          79s   10.42.0.176   lima-rancher-desktop   <none>           <none>
+suse-observability-e2es-847d5bc64d-lh6kz                          0/1     Init:0/1            0          79s   10.42.0.172   lima-rancher-desktop   <none>           <none>
+suse-observability-elasticsearch-master-0                         0/1     Init:0/1            0          79s   <none>        lima-rancher-desktop   <none>           <none>
+suse-observability-hbase-stackgraph-0                             0/1     PodInitializing     0          78s   10.42.0.196   lima-rancher-desktop   <none>           <none>
+suse-observability-hbase-tephra-mono-0                            0/1     Init:0/1            0          78s   10.42.0.194   lima-rancher-desktop   <none>           <none>
+suse-observability-init-pvc-08t152832-4nn7q                       0/1     ContainerCreating   0          79s   <none>        lima-rancher-desktop   <none>           <none>
+suse-observability-kafka-0                                        0/2     Pending             0          44s   <none>        <none>                 <none>           <none>
+suse-observability-kafkaup-operator-kafkaup-755458dcd4-zv6wq      1/1     Running             0          79s   10.42.0.182   lima-rancher-desktop   <none>           <none>
+suse-observability-otel-collector-0                               0/1     Init:0/1            0          79s   10.42.0.170   lima-rancher-desktop   <none>           <none>
+suse-observability-prometheus-elasticsearch-exporter-69b97b2l9r   1/1     Running             0          79s   10.42.0.180   lima-rancher-desktop   <none>           <none>
+suse-observability-rbac-agent-549c4dd7b9-5tjz7                    1/1     Running             0          79s   10.42.0.175   lima-rancher-desktop   <none>           <none>
+suse-observability-receiver-95688b86f-r4rxs                       0/1     Init:0/1            0          79s   10.42.0.177   lima-rancher-desktop   <none>           <none>
+suse-observability-router-6c7dc68b69-ztv46                        0/1     Running             0          79s   10.42.0.179   lima-rancher-desktop   <none>           <none>
+suse-observability-s3proxy-59d7f9c655-82ts5                       0/1     Init:0/1            0          79s   <none>        lima-rancher-desktop   <none>           <none>
+suse-observability-server-6784b96cd-vkx7t                         0/1     Pending             0          79s   <none>        <none>                 <none>           <none>
+suse-observability-topic-create-08t152832-gwtns                   0/1     Init:0/1            0          79s   10.42.0.171   lima-rancher-desktop   <none>           <none>
+suse-observability-ui-69fdb9549b-xj7qn                            1/2     ImagePullBackOff    0          79s   10.42.0.174   lima-rancher-desktop   <none>           <none>
+suse-observability-victoria-metrics-0-0                           0/1     ErrImagePull        0          78s   10.42.0.199   lima-rancher-desktop   <none>           <none>
+suse-observability-vmagent-0                                      0/1     Init:0/1            0          79s   10.42.0.188   lima-rancher-desktop   <none>           <none>
+suse-observability-workload-observer-0                            1/1     Running             0          79s   10.42.0.184   lima-rancher-desktop   <none>           <none>
+suse-observability-zookeeper-0                                    0/1     ContainerCreating   0          79s   <none>        lima-rancher-desktop   <none>           <none>
+
+## PVC
+NAME                                                    STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+data-suse-observability-clickhouse-shard0-0             Pending                                                                        local-path     <unset>                 79s
+data-suse-observability-elasticsearch-master-0          Bound     pvc-c13d6ea3-a7c3-4b3f-901e-bf87e47ebb17   50Gi       RWO            local-path     <unset>                 80s
+data-suse-observability-hbase-stackgraph-0              Bound     pvc-e01cea56-84f0-4bef-bc1d-8ffd217cfa14   50Gi       RWO            local-path     <unset>                 79s
+data-suse-observability-kafka-0                         Bound     pvc-d6ce4a8d-832a-4398-a544-92a1112d42b3   60Gi       RWO            local-path     <unset>                 80s
+data-suse-observability-workload-observer-0             Bound     pvc-049e2ec5-201f-4e51-a403-367b5a196a4c   1Gi        RWO            local-path     <unset>                 80s
+data-suse-observability-zookeeper-0                     Bound     pvc-d46a98bf-cd01-4929-9314-a43172e301d0   8Gi        RWO            local-path     <unset>                 80s
+server-volume-suse-observability-victoria-metrics-0-0   Bound     pvc-a6f2214d-66c7-4096-ae2d-f46809c0ab71   50Gi       RWO            local-path     <unset>                 79s
+snapshot-suse-observability-hbase-tephra-mono-0         Bound     pvc-52c47fdc-aa1c-4dff-8b27-a07c0efcd6d2   1Gi        RWO            local-path     <unset>                 80s
+suse-observability-backup-settings-data                 Bound     pvc-6c6da67a-b12a-4db3-ab2c-bf9275a23322   2Gi        RWO            local-path     <unset>                 80s
+suse-observability-settings-backup-data                 Bound     pvc-3cac0b1c-834b-49aa-8655-686dbaf167b5   1Gi        RWO            local-path     <unset>                 80s
+suse-observability-stackpacks                           Pending                                                                        local-path     <unset>                 80s
+suse-observability-stackpacks-local                     Pending                                                                        local-path     <unset>                 80s
+tmpdata-suse-observability-vmagent-0                    Bound     pvc-9ea4bbb7-9204-4265-8418-07559f87840c   10Gi       RWO            local-path     <unset>                 80s
+
+## Services
+NAME                                                   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                                                                   AGE
+suse-observability-backup-stackpacks                   ClusterIP   None            <none>        7090/TCP                                                                                  80s
+suse-observability-clickhouse                          ClusterIP   10.43.17.219    <none>        8123/TCP,9000/TCP,9004/TCP,9005/TCP,9009/TCP,8001/TCP                                     80s
+suse-observability-clickhouse-headless                 ClusterIP   None            <none>        8123/TCP,9000/TCP,9004/TCP,9005/TCP,9009/TCP                                              80s
+suse-observability-correlate                           ClusterIP   None            <none>        9404/TCP                                                                                  80s
+suse-observability-e2es                                ClusterIP   None            <none>        9404/TCP                                                                                  80s
+suse-observability-elasticsearch-master                ClusterIP   10.43.32.77     <none>        9200/TCP,9300/TCP                                                                         80s
+suse-observability-elasticsearch-master-headless       ClusterIP   None            <none>        9200/TCP,9300/TCP                                                                         80s
+suse-observability-hbase-stackgraph                    ClusterIP   None            <none>        10125/TCP,10126/TCP,10021/TCP,2182/TCP,60001/TCP,60011/TCP,60021/TCP,60031/TCP,9404/TCP   80s
+suse-observability-hbase-tephra                        ClusterIP   None            <none>        15165/TCP,9404/TCP                                                                        80s
+suse-observability-kafka                               ClusterIP   10.43.18.139    <none>        9092/TCP                                                                                  80s
+suse-observability-kafka-headless                      ClusterIP   None            <none>        9092/TCP,9093/TCP                                                                         80s
+suse-observability-kafka-jmx-metrics                   ClusterIP   10.43.170.79    <none>        5556/TCP                                                                                  80s
+suse-observability-otel-collector                      ClusterIP   10.43.116.208   <none>        8888/TCP,4317/TCP,4318/TCP                                                                80s
+suse-observability-otel-collector-grpc                 ClusterIP   10.43.238.179   <none>        4317/TCP                                                                                  80s
+suse-observability-prometheus-elasticsearch-exporter   ClusterIP   10.43.51.40     <none>        9108/TCP                                                                                  80s
+suse-observability-receiver                            ClusterIP   10.43.96.112    <none>        7077/TCP,9404/TCP                                                                         80s
+suse-observability-router                              ClusterIP   10.43.211.213   <none>        8080/TCP,8001/TCP                                                                         80s
+suse-observability-s3proxy                             ClusterIP   10.43.174.249   <none>        9000/TCP                                                                                  80s
+suse-observability-server-headless                     ClusterIP   None            <none>        7070/TCP,9404/TCP,7075/TCP                                                                80s
+suse-observability-ui                                  ClusterIP   10.43.54.113    <none>        8080/TCP,9113/TCP                                                                         80s
+suse-observability-victoria-metrics-0                  ClusterIP   None            <none>        8428/TCP                                                                                  80s
+suse-observability-victoriametrics                     ClusterIP   None            <none>        8428/TCP                                                                                  80s
+suse-observability-vmagent                             ClusterIP   None            <none>        8429/TCP                                                                                  80s
+suse-observability-zookeeper                           ClusterIP   10.43.158.7     <none>        2181/TCP,2888/TCP,3888/TCP                                                                80s
+suse-observability-zookeeper-headless                  ClusterIP   None            <none>        2181/TCP,2888/TCP,3888/TCP                                                                80s
+suse-observability-zookeeper-metrics                   ClusterIP   10.43.114.46    <none>        9141/TCP                                                                                  80s
+
+## Ingress

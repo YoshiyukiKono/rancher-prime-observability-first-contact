@@ -1,0 +1,14 @@
+NAME                                                    STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+data-suse-observability-clickhouse-shard0-0             Bound     pvc-8ef8ecf3-52df-4291-8804-3b187b575426   5Gi        RWO            local-path     <unset>                 4m36s
+data-suse-observability-elasticsearch-master-0          Pending                                                                        local-path     <unset>                 4m36s
+data-suse-observability-hbase-stackgraph-0              Bound     pvc-7754ce75-1e55-444a-99ef-d16de8ad90fd   20Gi       RWO            local-path     <unset>                 4m36s
+data-suse-observability-kafka-0                         Pending                                                                        local-path     <unset>                 4m36s
+data-suse-observability-workload-observer-0             Bound     pvc-fef0d108-83d0-49ba-994d-a2aa74685ed9   1Gi        RWO            local-path     <unset>                 4m36s
+data-suse-observability-zookeeper-0                     Pending                                                                        local-path     <unset>                 4m36s
+server-volume-suse-observability-victoria-metrics-0-0   Bound     pvc-2da5c2b1-d8d0-4cc0-84ce-d7e9463e4fb9   10Gi       RWO            local-path     <unset>                 4m36s
+snapshot-suse-observability-hbase-tephra-mono-0         Bound     pvc-8134271f-d8c6-4b3a-913e-eac483ade93b   1Gi        RWO            local-path     <unset>                 4m36s
+suse-observability-backup-settings-data                 Bound     pvc-baf8769a-40b2-4bc2-b1a7-17234b3c9085   2Gi        RWO            local-path     <unset>                 4m37s
+suse-observability-settings-backup-data                 Bound     pvc-6f492ae0-fa71-41a4-81b5-cfe9147f0de1   1Gi        RWO            local-path     <unset>                 4m37s
+suse-observability-stackpacks                           Pending                                                                        local-path     <unset>                 4m37s
+suse-observability-stackpacks-local                     Pending                                                                        local-path     <unset>                 4m37s
+tmpdata-suse-observability-vmagent-0                    Bound     pvc-cb0e401d-7e03-4fca-8a06-847b44b83b73   10Gi       RWO            local-path     <unset>                 4m36s

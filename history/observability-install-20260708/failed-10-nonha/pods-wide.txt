@@ -1,0 +1,23 @@
+NAME                                                              READY   STATUS      RESTARTS        AGE     IP            NODE                   NOMINATED NODE   READINESS GATES
+suse-observability-clickhouse-shard0-0                            0/2     Pending     0               7m58s   <none>        <none>                 <none>           <none>
+suse-observability-correlate-c9fdd66b-8bvpp                       0/1     Init:0/1    1 (2m32s ago)   7m59s   10.42.0.176   lima-rancher-desktop   <none>           <none>
+suse-observability-e2es-847d5bc64d-lh6kz                          0/1     Init:0/1    1 (2m31s ago)   7m59s   10.42.0.172   lima-rancher-desktop   <none>           <none>
+suse-observability-elasticsearch-master-0                         1/1     Running     0               7m59s   10.42.0.195   lima-rancher-desktop   <none>           <none>
+suse-observability-hbase-stackgraph-0                             1/1     Running     0               7m58s   10.42.0.196   lima-rancher-desktop   <none>           <none>
+suse-observability-hbase-tephra-mono-0                            1/1     Running     0               7m58s   10.42.0.194   lima-rancher-desktop   <none>           <none>
+suse-observability-init-pvc-08t152832-4nn7q                       0/1     Completed   0               7m59s   10.42.0.197   lima-rancher-desktop   <none>           <none>
+suse-observability-kafka-0                                        0/2     Pending     0               7m24s   <none>        <none>                 <none>           <none>
+suse-observability-kafkaup-operator-kafkaup-755458dcd4-zv6wq      1/1     Running     0               7m59s   10.42.0.182   lima-rancher-desktop   <none>           <none>
+suse-observability-otel-collector-0                               0/1     Init:0/1    1 (2m32s ago)   7m59s   10.42.0.170   lima-rancher-desktop   <none>           <none>
+suse-observability-prometheus-elasticsearch-exporter-69b97b2l9r   1/1     Running     0               7m59s   10.42.0.180   lima-rancher-desktop   <none>           <none>
+suse-observability-rbac-agent-549c4dd7b9-5tjz7                    1/1     Running     0               7m59s   10.42.0.175   lima-rancher-desktop   <none>           <none>
+suse-observability-receiver-95688b86f-r4rxs                       0/1     Init:0/1    1 (2m31s ago)   7m59s   10.42.0.177   lima-rancher-desktop   <none>           <none>
+suse-observability-router-6c7dc68b69-ztv46                        1/1     Running     0               7m59s   10.42.0.179   lima-rancher-desktop   <none>           <none>
+suse-observability-s3proxy-59d7f9c655-82ts5                       1/1     Running     0               7m59s   10.42.0.186   lima-rancher-desktop   <none>           <none>
+suse-observability-server-6784b96cd-vkx7t                         0/1     Pending     0               7m59s   <none>        <none>                 <none>           <none>
+suse-observability-topic-create-08t152832-gwtns                   0/1     Init:0/1    1 (2m32s ago)   7m59s   10.42.0.171   lima-rancher-desktop   <none>           <none>
+suse-observability-ui-69fdb9549b-xj7qn                            2/2     Running     0               7m59s   10.42.0.174   lima-rancher-desktop   <none>           <none>
+suse-observability-victoria-metrics-0-0                           1/1     Running     0               7m58s   10.42.0.199   lima-rancher-desktop   <none>           <none>
+suse-observability-vmagent-0                                      1/1     Running     0               7m59s   10.42.0.188   lima-rancher-desktop   <none>           <none>
+suse-observability-workload-observer-0                            1/1     Running     0               7m59s   10.42.0.184   lima-rancher-desktop   <none>           <none>
+suse-observability-zookeeper-0                                    1/1     Running     0               7m59s   10.42.0.187   lima-rancher-desktop   <none>           <none>

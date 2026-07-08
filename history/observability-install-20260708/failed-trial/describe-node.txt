@@ -1,0 +1,136 @@
+Name:               lima-rancher-desktop
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=lima-rancher-desktop
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node.kubernetes.io/instance-type=k3s
+Annotations:        alpha.kubernetes.io/provided-node-ip: 192.168.5.15
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"da:d0:35:df:54:d6"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 192.168.64.4
+                    k3s.io/external-ip: 192.168.64.4
+                    k3s.io/hostname: lima-rancher-desktop
+                    k3s.io/internal-ip: 192.168.5.15
+                    k3s.io/node-args:
+                      ["server","--https-listen-port","6443","--node-ip","192.168.5.15","--flannel-iface","vznat","--node-external-ip","192.168.64.4","--docker"...
+                    k3s.io/node-config-hash: 4UVE4MBHX3BVVF4VANS3VXOYONDHYUMG64QXUEIMKJINL6NZCDNQ====
+                    k3s.io/node-env: {}
+                    management.cattle.io/pod-limits: {"cpu":"11720m","ephemeral-storage":"11Gi","memory":"17388Mi"}
+                    management.cattle.io/pod-requests: {"cpu":"4915m","ephemeral-storage":"11Mi","memory":"15749Mi","pods":"45"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 06 Jul 2026 13:42:35 +0900
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  lima-rancher-desktop
+  AcquireTime:     <unset>
+  RenewTime:       Wed, 08 Jul 2026 15:44:07 +0900
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Wed, 08 Jul 2026 15:43:53 +0900   Mon, 06 Jul 2026 13:42:35 +0900   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Wed, 08 Jul 2026 15:43:53 +0900   Mon, 06 Jul 2026 13:42:35 +0900   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Wed, 08 Jul 2026 15:43:53 +0900   Mon, 06 Jul 2026 13:42:35 +0900   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Wed, 08 Jul 2026 15:43:53 +0900   Wed, 08 Jul 2026 11:07:50 +0900   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.5.15
+  ExternalIP:  192.168.64.4
+  Hostname:    lima-rancher-desktop
+Capacity:
+  cpu:                6
+  ephemeral-storage:  102625208Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             16355440Ki
+  pods:               110
+Allocatable:
+  cpu:                6
+  ephemeral-storage:  99833802265
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             16355440Ki
+  pods:               110
+System Info:
+  Machine ID:                 3001d84499a1a3deca6991f6699cafea
+  System UUID:                08cb991e-e958-7343-82f3-8963efabe8b9
+  Boot ID:                    abdc61a0-ebef-48d0-b9ad-5fe51aac8fde
+  Kernel Version:             6.6.119-0-virt
+  OS Image:                   Alpine Linux v3.23
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  docker://29.1.3
+  Kubelet Version:            v1.35.6+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.0.0/24
+PodCIDRs:                     10.42.0.0/24
+ProviderID:                   k3s://lima-rancher-desktop
+Non-terminated Pods:          (45 in total)
+  Namespace                   Name                                                               CPU Requests  CPU Limits   Memory Requests  Memory Limits  Age
+  ---------                   ----                                                               ------------  ----------   ---------------  -------------  ---
+  cattle-ai-agent-system      rancher-ai-agent-55c694f4f8-q2v77                                  0 (0%)        0 (0%)       0 (0%)           0 (0%)         47h
+  cattle-ai-agent-system      rancher-mcp-server-f8bddf56d-xjn2s                                 0 (0%)        0 (0%)       0 (0%)           0 (0%)         47h
+  cattle-capi-system          capi-controller-manager-665fc47d9-pnts8                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-fleet-local-system   fleet-agent-57bf575f84-p46sp                                       0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-fleet-system         fleet-controller-8c7954dfd-c5692                                   0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-fleet-system         gitjob-7ffc766868-tmf74                                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-fleet-system         helmops-7f67477dd7-l2vw8                                           0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-neuvector-system     neuvector-controller-pod-84757f8b44-97lxl                          0 (0%)        0 (0%)       0 (0%)           0 (0%)         4h39m
+  cattle-neuvector-system     neuvector-enforcer-pod-phcl7                                       0 (0%)        0 (0%)       0 (0%)           0 (0%)         5h31m
+  cattle-neuvector-system     neuvector-manager-pod-76cdbf54d9-pztbt                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         4h39m
+  cattle-neuvector-system     neuvector-scanner-pod-5d5d6449d4-w6psh                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         4h19m
+  cattle-scc-system           rancher-scc-operator-d4946cb85-nsj6x                               0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-system               rancher-7464b75d-hdrmr                                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-system               rancher-webhook-84d879987d-f9pzm                                   0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-system               system-upgrade-controller-6d8b8567f8-4h5mb                         0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d1h
+  cattle-turtles-system       rancher-turtles-controller-manager-57744d846f-4bsrw                10m (0%)      500m (8%)    128Mi (0%)       600Mi (3%)     2d1h
+  cert-manager                cert-manager-559776c68d-zwzkx                                      0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d2h
+  cert-manager                cert-manager-cainjector-7cdf9b4bd8-2m2vk                           0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d2h
+  cert-manager                cert-manager-webhook-5f7fd7899-dx6w6                               0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d2h
+  demo-light                  backend-httpbin-7f9c576b99-mptxd                                   50m (0%)      500m (8%)    64Mi (0%)        256Mi (1%)     153m
+  demo-light                  debug-curl-5cdfb469b5-mhkh2                                        10m (0%)      100m (1%)    32Mi (0%)        128Mi (0%)     153m
+  demo-light                  frontend-nginx-8f69c749c-c59qf                                     20m (0%)      200m (3%)    32Mi (0%)        128Mi (0%)     153m
+  demo-light                  traffic-generator-7c9dd555f6-cvlxh                                 10m (0%)      100m (1%)    32Mi (0%)        128Mi (0%)     153m
+  kube-system                 coredns-8b64bcf7c-fr2mf                                            100m (1%)     0 (0%)       70Mi (0%)        170Mi (1%)     2d2h
+  kube-system                 local-path-provisioner-5d9d9885bc-dsthp                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d2h
+  kube-system                 metrics-server-786d997795-dk6hs                                    100m (1%)     0 (0%)       70Mi (0%)        0 (0%)         2d2h
+  kube-system                 svclb-traefik-b4c086db-84zzt                                       0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d2h
+  kube-system                 traefik-d98ccfdf6-kjcjk                                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         2d2h
+  suse-observability          suse-observability-clickhouse-shard0-0                             550m (9%)     1100m (18%)  4346Mi (27%)     4346Mi (27%)   4m37s
+  suse-observability          suse-observability-correlate-cf85586c7-2h8hv                       500m (8%)     1 (16%)      1250Mi (7%)      1250Mi (7%)    4m37s
+  suse-observability          suse-observability-e2es-84cdcd47cc-4zz9g                           50m (0%)      500m (8%)    512Mi (3%)       512Mi (3%)     4m37s
+  suse-observability          suse-observability-hbase-stackgraph-0                              500m (8%)     1500m (25%)  2250Mi (14%)     2250Mi (14%)   4m37s
+  suse-observability          suse-observability-hbase-tephra-mono-0                             50m (0%)      100m (1%)    512Mi (3%)       512Mi (3%)     4m37s
+  suse-observability          suse-observability-kafkaup-operator-kafkaup-755458dcd4-rp2k9       25m (0%)      50m (0%)     32Mi (0%)        64Mi (0%)      4m37s
+  suse-observability          suse-observability-otel-collector-0                                250m (4%)     500m (8%)    512Mi (3%)       512Mi (3%)     4m37s
+  suse-observability          suse-observability-prometheus-elasticsearch-exporter-69b979cld8    50m (0%)      50m (0%)     50Mi (0%)        50Mi (0%)      4m37s
+  suse-observability          suse-observability-rbac-agent-549c4dd7b9-hkfqf                     50m (0%)      100m (1%)    25Mi (0%)        40Mi (0%)      4m37s
+  suse-observability          suse-observability-receiver-786567c4d-7psr6                        1 (16%)       2 (33%)      1000Mi (6%)      1000Mi (6%)    4m37s
+  suse-observability          suse-observability-router-84bf6b6fc9-22nb4                         100m (1%)     100m (1%)    128Mi (0%)       128Mi (0%)     4m37s
+  suse-observability          suse-observability-s3proxy-59d7f9c655-n7r84                        200m (3%)     1 (16%)      700Mi (4%)       700Mi (4%)     4m37s
+  suse-observability          suse-observability-topic-create-08t153930-cscvb                    500m (8%)     1 (16%)      2000Mi (12%)     2000Mi (12%)   4m37s
+  suse-observability          suse-observability-ui-bc955bfc8-79cqn                              70m (1%)      70m (1%)     96Mi (0%)        96Mi (0%)      4m37s
+  suse-observability          suse-observability-victoria-metrics-0-0                            500m (8%)     1 (16%)      1500Mi (9%)      1750Mi (10%)   4m37s
+  suse-observability          suse-observability-vmagent-0                                       200m (3%)     200m (3%)    384Mi (2%)       640Mi (4%)     4m37s
+  suse-observability          suse-observability-workload-observer-0                             20m (0%)      50m (0%)     24Mi (0%)        128Mi (0%)     4m37s
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests       Limits
+  --------           --------       ------
+  cpu                4915m (81%)    11720m (195%)
+  memory             15749Mi (98%)  17388Mi (108%)
+  ephemeral-storage  11Mi (0%)      11Gi (11%)
+  hugepages-1Gi      0 (0%)         0 (0%)
+  hugepages-2Mi      0 (0%)         0 (0%)
+  hugepages-32Mi     0 (0%)         0 (0%)
+  hugepages-64Ki     0 (0%)         0 (0%)
+Events:              <none>
