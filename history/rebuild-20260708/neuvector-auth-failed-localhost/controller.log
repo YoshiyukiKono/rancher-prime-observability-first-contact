@@ -1,0 +1,247 @@
+2026-07-08T08:52:04|MON|/usr/local/bin/monitor starts, pid=1
+2026-07-08T08:52:04|MON|Start ctrl, pid=7
+2026-07-08T08:52:04|MON|Start opa, pid=8
+{"fields.time":"2026-07-08T08:52:04.962929827Z","level":"warning","msg":"OPA running with uid or gid 0. Running OPA with root privileges is not recommended.","time":"2026-07-08T08:52:04Z"}
+2026-07-08T08:52:04.985|INFO|CTL|main.main: START - version=v5.5.3
+2026-07-08T08:52:04.986|INFO|CTL|main.main: - join=neuvector-svc-controller.cattle-neuvector-system
+2026-07-08T08:52:04.986|INFO|CTL|main.main: - advertise=10.42.0.113
+2026-07-08T08:52:04.986|INFO|CTL|main.main: - bind=10.42.0.113
+2026-07-08T08:52:04.988|INFO|CTL|container.Connect: - endpoint=
+2026-07-08T08:52:04.988|INFO|CTL|container.InitStubRtDriver:
+2026-07-08T08:52:05.014|ERRO|CTL|orchestration.GetK8sVersion: getVersion fail - code=403, tag=oc, useToken=true
+2026-07-08T08:52:05.016|INFO|CTL|main.main: - cgroups=2
+2026-07-08T08:52:05.016|INFO|CTL|main.main: Container socket connected - endpoint= runtime=stubRtDriver
+2026-07-08T08:52:05.016|INFO|CTL|main.main: - flavor=Rancher k8s=1.35.6+k3s1 oc=
+2026-07-08T08:52:05.016|INFO|CTL|resource.(*kubernetes).monitorK8sTokenFile: Initial mod time - lastTokenModTime=2026-07-08 08:52:02.310000826 +0000 UTC
+2026-07-08T08:52:05.3  |INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-updater-pod sa=neuvector
+2026-07-08T08:52:05.302|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-enforcer-pod sa=neuvector
+2026-07-08T08:52:05.303|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-scanner-pod sa=neuvector
+2026-07-08T08:52:05.304|ERRO|CTL|resource.getNeuvectorSvcAccount: resource no found - err=kubernetes api: Failure 404 deployments.apps "neuvector-registry-adapter-pod" not found name=neuvector-registry-adapter-pod rt=deployment
+2026-07-08T08:52:05.306|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-cert-upgrader-pod sa=neuvector
+2026-07-08T08:52:05.306|INFO|CTL|resource.GetNvCtrlerServiceAccount: - nvControllerSA=neuvector
+2026-07-08T08:52:05.312|INFO|CTL|main.main: - host={ID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Name:lima-rancher-desktop Runtime:stubRtDriver Platform:Kubernetes Flavor:Rancher CloudPlatform: Network:Default RuntimeVer:1.0 RuntimeAPIVer:1.0 OS:SUSE Linux Enterprise Server 15 SP7 Kernel:6.6.119-0-virt CPUs:8 Memory:25160581120 Ifaces:map[] TunnelIP:[] CapDockerBench:false CapKubeBench:false StorageDriver: CgroupVersion:2}
+2026-07-08T08:52:05.313|INFO|CTL|main.main: - ctrler={CLUSDevice:{ID:6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb Name:k8s_neuvector-controller-pod_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-67867bc77c-lwqd4 io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:bda887d3-7932-45b3-a43b-513911715a41 name:controller neuvector.role:controller pod-template-hash:67867bc77c release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 08:52:04.988500952 +0000 UTC StartedAt:2026-07-08 08:52:04.988500952 +0000 UTC JoinedAt:0001-01-01 00:00:00 +0000 UTC MemoryLimit:0 CPUs: ClusterIP: RPCServerPort:0 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.113 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:false OrchConnStatus: OrchConnLastError: ReadPrimeConfig:false}
+2026-07-08T08:52:05.313|INFO|CTL|main.main: start initializing k8s internal secret controller and wait for internal secret creation if it's not created
+2026-07-08T08:52:05.325|INFO|CTL|migration.(*InternalSecretController).secretAdd: Internal secret is up-to-date - rev=20274
+2026-07-08T08:52:05.42 |INFO|CTL|migration.InitializeInternalSecretController: cache is synced and internal cert is ready
+2026-07-08T08:52:05.42 |INFO|CTL|main.main: internal certificate is initialized
+2026-07-08T08:52:05.438|INFO|CTL|ruleid.Init: UUID: 
+2026-07-08T08:52:05.438|INFO|CTL|cluster.FillClusterAddrs: - advertise=10.42.0.113 join=neuvector-svc-controller.cattle-neuvector-system
+2026-07-08T08:52:05.438|INFO|CTL|ruleid.(*uuidPRuleCache).ruleIdTimerLoop: UUID: timer starts
+2026-07-08T08:52:05.44 |INFO|CTL|cluster.(*consulMethod).Start: - config=&{ID:6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb Server:true Debug:false Ifaces:map[eth0:[{IPNet:{IP:10.42.0.113 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]] JoinAddr:neuvector-svc-controller.cattle-neuvector-system joinAddrList:[10.42.0.110] BindAddr:10.42.0.113 AdvertiseAddr:10.42.0.113 DataCenter:neuvector RPCPort:0 LANPort:0 WANPort:0 EnableDebug:false} recover=false
+2026-07-08T08:52:05.44 |INFO|CTL|cluster.(*consulMethod).Start: - node-id=b56cb6e2-4cbd-13a5-691d-3e3deda4e475
+2026-07-08T08:52:05.44 |INFO|CTL|cluster.(*consulMethod).Start: Consul start - args=[agent -datacenter neuvector -data-dir /tmp/neuvector -server -bootstrap-expect 2 -config-file /tmp/neuvector/consul.json -bind 10.42.0.113 -advertise 10.42.0.113 -node 10.42.0.113 -node-id b56cb6e2-4cbd-13a5-691d-3e3deda4e475 -raft-protocol 3 -retry-join 10.42.0.110]
+==> Starting Consul agent...
+               Version: '1.16.4'
+            Build Date: '1970-01-01 00:00:01 +0000 UTC'
+               Node ID: 'b56cb6e2-4cbd-13a5-691d-3e3deda4e475'
+             Node name: '10.42.0.113'
+            Datacenter: 'neuvector' (Segment: '<all>')
+                Server: true (Bootstrap: false)
+           Client Addr: [127.0.0.1] (HTTP: 8500, HTTPS: -1, gRPC: -1, gRPC-TLS: -1, DNS: -1)
+          Cluster Addr: 10.42.0.113 (LAN: 18301, WAN: -1)
+     Gossip Encryption: true
+      Auto-Encrypt-TLS: false
+           ACL Enabled: false
+     Reporting Enabled: false
+    ACL Default Policy: allow
+             HTTPS TLS: Verify Incoming: true, Verify Outgoing: true, Min Version: TLSv1_2
+              gRPC TLS: Verify Incoming: false, Min Version: TLSv1_2
+      Internal RPC TLS: Verify Incoming: true, Verify Outgoing: true (Verify Hostname: false), Min Version: TLSv1_2
+
+==> Log data will now stream in as it occurs:
+
+2026-07-08T08:52:15.441|INFO|CTL|utils.SetReady: - value=ctrl init done
+2026-07-08T08:52:15.442|INFO|CTL|cluster.StartCluster: - lead=10.42.0.110
+2026-07-08T08:52:15.489|INFO|CTL|main.likelyNewCluster: - all=[10.42.0.113 10.42.0.110] oldest=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564
+2026-07-08T08:52:15.907|INFO|CTL|resource.GetNvControllerPodsNumber: - err=<nil> limits= pods=10.42.0.110/32,10.42.0.113/32 requests=
+2026-07-08T08:52:15.908|INFO|CTL|main.main: - cspEnv= ctrler={CLUSDevice:{ID:6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb Name:k8s_neuvector-controller-pod_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-67867bc77c-lwqd4 io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:bda887d3-7932-45b3-a43b-513911715a41 name:controller neuvector.role:controller pod-template-hash:67867bc77c release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 08:52:04.988500952 +0000 UTC StartedAt:2026-07-08 08:52:04.988500952 +0000 UTC JoinedAt:2026-07-08 08:52:15.482864707 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.113 RPCServerPort:18400 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.113 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:false OrchConnStatus: OrchConnLastError: ReadPrimeConfig:true} lead=10.42.0.110 new-cluster=false noDefAdmin=false self=10.42.0.113
+2026-07-08T08:52:15.909|INFO|CTL|kv.(*clusterHelper).GetInstallationID: installation ID is updated - id=07a87cf53fe54c998f5e17b180612544
+2026-07-08T08:52:15.92 |INFO|CTL|main.main: store passphrase generate/read
+2026-07-08T08:52:15.924|INFO|CTL|main.main: - emptyKvFound=false ver={CtrlVersion:v5.5.3 KVVersion:94444768}
+2026-07-08T08:52:15.928|INFO|CTL|kv.clusterHelper.UpgradeClusterKV: Before upgrade - version=&{CtrlVersion:v5.5.3 KVVersion:94444768}
+2026-07-08T08:52:15.93 |INFO|CTL|kv.clusterHelper.UpgradeClusterKV: After upgrade - version=&{CtrlVersion:v5.5.3 KVVersion:94444768}
+2026-07-08T08:52:15.951|INFO|CTL|kv.clusterHelper.FixMissingClusterKV: Re-create because not found - key=object/config/group/fed.nodes
+2026-07-08T08:52:15.953|INFO|CTL|kv.clusterHelper.FixMissingClusterKV: Re-create because not found - key=object/config/group/fed.containers
+2026-07-08T08:52:15.955|INFO|CTL|main.waitConfigLoaded: Wait config loaded flag ...
+2026-07-08T08:52:15.956|INFO|CTL|main.waitConfigLoaded: Got config loaded flag.
+2026-07-08T08:52:15.956|INFO|CTL|kv.ValidateWebhookCert:
+2026-07-08T08:52:16.24 |INFO|CTL|kv.ValidateWebhookCert: - err1=<nil> err2=<nil>
+2026-07-08T08:52:16.24 |INFO|CTL|kv.ValidateWebhookCert: sha256 - cert=59d014f83534778703751dac76610533eb86851591b3a42a1709e1b298880ff6 cn=rootCA
+2026-07-08T08:52:16.522|INFO|CTL|kv.verifyWebServerCert: - cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc customerCert=false san=[neuvector-svc-admission-webhook.cattle-neuvector-system.svc] subject=CN=neuvector-svc-admission-webhook.cattle-neuvector-system.svc,OU=Neuvector,O=Neuvector,L=EN,ST=CA,C=US
+2026-07-08T08:52:16.522|INFO|CTL|kv.ValidateWebhookCert: sha256 - cert=87f63a8c7a8c132d03c61039f7e4a1f59bce09533035ca85c98f5b7c74ede7a2 cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc
+2026-07-08T08:52:16.834|INFO|CTL|kv.verifyWebServerCert: - cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc customerCert=false san=[neuvector-svc-crd-webhook.cattle-neuvector-system.svc] subject=CN=neuvector-svc-crd-webhook.cattle-neuvector-system.svc,OU=Neuvector,O=Neuvector,L=EN,ST=CA,C=US
+2026-07-08T08:52:16.834|INFO|CTL|kv.ValidateWebhookCert: sha256 - cert=316bdf619754778018ffcb6de8ca7a833c28b37ace8d34584341a8602ccf35f1 cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc
+2026-07-08T08:52:17.398|INFO|CTL|nvvalidatewebhookcfg.SetCABundle: sha256 - cert=87f63a8c7a8c132d03c61039f7e4a1f59bce09533035ca85c98f5b7c74ede7a2 svcName=neuvector-svc-admission-webhook
+2026-07-08T08:52:17.675|INFO|CTL|nvvalidatewebhookcfg.SetCABundle: sha256 - cert=316bdf619754778018ffcb6de8ca7a833c28b37ace8d34584341a8602ccf35f1 svcName=neuvector-svc-crd-webhook
+2026-07-08T08:52:17.678|INFO|CTL|cache.Init: - isLeader=false leadAddr=10.42.0.110
+2026-07-08T08:52:17.908|INFO|CTL|cache.startWorkerThread: - CheckKeyRotationDuration=1h0m0s KeyRotationDuration=2160h0m0s
+2026-07-08T08:52:17.926|INFO|CTL|cache.SyncLearnedPolicyFromCluster: - maxLearnRuleID=10021 total learned rules=21
+2026-07-08T08:52:17.938|INFO|CTL|cache.licenseInit:
+2026-07-08T08:52:17.939|INFO|CTL|cache.ScannerChangeNotify: - isScanner=false
+2026-07-08T08:52:17.94 |INFO|CTL|scan.Init:
+2026-07-08T08:52:17.94 |INFO|CTL|scan.ScannerChangeNotify: - scanner=false
+2026-07-08T08:52:17.942|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-enforcer-pod sa=neuvector
+2026-07-08T08:52:17.944|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-scanner-pod sa=neuvector
+2026-07-08T08:52:17.945|ERRO|CTL|resource.getNeuvectorSvcAccount: resource no found - err=kubernetes api: Failure 404 deployments.apps "neuvector-registry-adapter-pod" not found name=neuvector-registry-adapter-pod rt=deployment
+2026-07-08T08:52:17.947|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-cert-upgrader-pod sa=neuvector
+2026-07-08T08:52:17.948|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-updater-pod sa=neuvector
+2026-07-08T08:52:17.99 |ERRO|CTL|resource.(*kubernetes).RegisterResource: fail to register - error=Failed to discover API group: image.openshift.io(decode error status 404: decode json: invalid character 'p' after top-level value) resource=image
+2026-07-08T08:52:17.991|INFO|CTL|main.(*orchConn).cbWatcherState: updating conn status - lastError= status=connected
+2026-07-08T08:52:20.05 |INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.062|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.073|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.086|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.093|INFO|CTL|main.startGRPCServer: - port=18400
+2026-07-08T08:52:20.093|INFO|CTL|main.startGRPCServer: GRPC server started
+2026-07-08T08:52:20.093|INFO|CTL|rest.initCertificates: cert manager is configured. - period=30m0s threshold=720h0m0s validity_length_day=90
+2026-07-08T08:52:20.094|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.101|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.109|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.115|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.123|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T08:52:20.373|INFO|CTL|rest.initCertificates.func2: new certificate is loaded - cn=neuvector-jwt-signing newExpiryDate=2026-10-06 08:33:21 +0000 UTC oldExpiryDate=<nil>
+2026-07-08T08:52:20.374|INFO|CTL|cache.SyncInit: - new-cluster=false
+2026-07-08T08:52:20.376|INFO|CTL|cache.ctrlSyncFromTarget: - target=10.42.0.110
+2026-07-08T08:52:20.377|INFO|CTL|cache.reqSync: - sync=event target=10.42.0.110
+2026-07-08T08:52:20.42 |INFO|CTL|cache.reqSync: - sync=threat target=10.42.0.110
+2026-07-08T08:52:20.422|INFO|CTL|cache.reqSync: - sync=graph target=10.42.0.110
+2026-07-08T08:52:20.429|INFO|CTL|cache.syncGraphRx: - links=34 maxLearnRuleID=10021 nodes=24 rules=21 vios=0
+2026-07-08T08:52:20.429|INFO|CTL|cache.reqSync: - sync=incident target=10.42.0.110
+2026-07-08T08:52:20.432|INFO|CTL|cache.reqSync: - sync=audit target=10.42.0.110
+2026-07-08T08:52:20.442|INFO|CTL|cache.reqSync: - sync=activity target=10.42.0.110
+2026-07-08T08:52:20.466|INFO|CTL|rest.LoadInitCfg: - cfgmapTried=map[] load=false
+2026-07-08T08:52:20.468|INFO|CTL|rest.LoadInitCfg: done - cfgmapTried=map[] defAdminLoaded=false load=false
+2026-07-08T08:52:20.468|INFO|CTL|main.main: - defAdminLoaded=false defAdminRestored=false
+2026-07-08T08:52:20.468|INFO|CTL|cache.ScannerUpdateHandler: Add or update scanner - scanner={ID:NeuVectorCVEDBVersion CVEDBVersion:4.217 CVEDBCreateTime:2026-07-05T20:44:26Z JoinedAt:0001-01-01 00:00:00 +0000 UTC RPCServer: RPCServerPort:0 BuiltIn:false CVEDBEntries:276503 ScanCredit:0 MaxConcurrentScansPerScanner:0}
+2026-07-08T08:52:20.468|INFO|CTL|cache.memberStateUpdateHandler: - agentID= flag=3 member=10.42.0.101 notify=connect
+2026-07-08T08:52:20.468|INFO|CTL|cache.memberStateUpdateHandler: - agentID= flag=3 member=10.42.0.110 notify=connect
+2026-07-08T08:52:20.468|INFO|CTL|cache.memberStateUpdateHandler: - agentID= flag=3 member=10.42.0.113 notify=connect
+2026-07-08T08:52:20.469|INFO|CTL|rest.LeadChangeNotify: - _isLeader=0 isLeader=false
+2026-07-08T08:52:20.469|INFO|CTL|rest.initDefaultRegistries: - default registries=[https://docker.io/ https://index.docker.io/ https://registry.hub.docker.com/ https://registry-1.docker.io/]
+2026-07-08T08:52:20.469|INFO|CTL|main.main.func4: Memory Snapshots - Snapshot_At=3865470566 Step=644245094
+2026-07-08T08:52:20.469|INFO|CTL|main.main.func4: Memory Resource - Controlled_At=4831838208 Controlled_Limit=6442450944
+2026-07-08T08:52:20.47 |ERRO|CTL|system.(*SystemTools).MonitorMemoryPressureEvents: - error=not supported
+2026-07-08T08:52:20.47 |ERRO|CTL|main.main.func4.1: MonitorMemoryPressureEvents - error=not supported
+2026-07-08T08:52:20.471|INFO|CTL|rest.StartRESTServer: Start REST server - port=10443
+2026-07-08T08:52:20.602|INFO|CTL|rest.restartWebhookServer: - svcName=neuvector-svc-admission-webhook
+2026-07-08T08:52:20.602|ERRO|CTL|rest.StartStopFedPingPoll.func1: restartWebhookServer - error=not supported(neuvector-svc-admission-webhook)
+2026-07-08T08:52:20.884|INFO|CTL|rest.loadX509KeyPair: sha256 - cert=87f63a8c7a8c132d03c61039f7e4a1f59bce09533035ca85c98f5b7c74ede7a2 svcName=neuvector-svc-admission-webhook
+2026-07-08T08:52:20.884|INFO|CTL|rest.k8sWebhookRestServer: Started Admission REST server - port=20443 svcName=neuvector-svc-admission-webhook
+2026-07-08T08:52:20.886|INFO|CTL|rest.loadX509KeyPair: sha256 - cert=316bdf619754778018ffcb6de8ca7a833c28b37ace8d34584341a8602ccf35f1 svcName=neuvector-svc-crd-webhook
+2026-07-08T08:52:20.887|INFO|CTL|rest.k8sWebhookRestServer: Started Admission REST server - port=30443 svcName=neuvector-svc-crd-webhook
+2026-07-08T08:52:20.916|INFO|CTL|cache.certObjectUpdate: sha256 - cert=59d014f83534778703751dac76610533eb86851591b3a42a1709e1b298880ff6 svcName=rootCA
+2026-07-08T08:52:21.208|INFO|CTL|cache.certObjectUpdate: sha256 - cert=87f63a8c7a8c132d03c61039f7e4a1f59bce09533035ca85c98f5b7c74ede7a2 svcName=neuvector-svc-admission-webhook
+2026-07-08T08:52:21.484|INFO|CTL|cache.certObjectUpdate: sha256 - cert=316bdf619754778018ffcb6de8ca7a833c28b37ace8d34584341a8602ccf35f1 svcName=neuvector-svc-crd-webhook
+2026-07-08T08:52:21.486|INFO|CTL|cache.fedConfigUpdate: - role=
+2026-07-08T08:52:21.487|INFO|CTL|scan.FedRoleChangeNotify: - fedRole=
+2026-07-08T08:52:21.632|INFO|CTL|cache.agentUpdate: Add or update enforcer - agent={CLUSDevice:{ID:2d5ce8252a9b47ba08e2d9d8c3875388624bc2b55d8abbb246481255eff5155b Name:k8s_neuvector-enforcer-pod_neuvector-enforcer-pod-jb4p6_cattle-neuvector-system_4f788959-d8c5-4548-87fc-613c85b6ccca_0 SelfHostname:neuvector-enforcer-pod-jb4p6 HostName:lima-rancher-desktop HostID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Domain:cattle-neuvector-system NetworkMode:container:2fce69dda7fcf7f2d871d42934a095991773945dc893fa6731312a3c44e81a12 PidMode:host Ver:v5.5.3 Labels:map[annotation.io.kubernetes.container.hash:6ef9eca2 annotation.io.kubernetes.container.restartCount:0 annotation.io.kubernetes.container.terminationMessagePath:/dev/termination-log annotation.io.kubernetes.container.terminationMessagePolicy:File annotation.io.kubernetes.pod.terminationGracePeriod:1200 com.suse.bci.micro.authors:https://github.com/SUSE/bci/discussions com.suse.bci.micro.created:2026-06-11T12:36:50.331594000Z com.suse.bci.micro.description:A micro environment for containers based on the SUSE Linux Enterprise Base Container Image. com.suse.bci.micro.disturl:obs://build.suse.de/SUSE:SLE-15-SP7:Update:CR/containers/cd042e272e4e0cc1722c914df35368b7-micro-image com.suse.bci.micro.eula:sle-bci com.suse.bci.micro.lifecycle-url:https://www.suse.com/lifecycle#suse-linux-enterprise-server-15 com.suse.bci.micro.name:15.7-57.1 com.suse.bci.micro.reference:registry.suse.com/bci/bci-micro:15.7-57.1 com.suse.bci.micro.release-stage:released com.suse.bci.micro.source:https://sources.suse.com/SUSE:SLE-15-SP7:Update:CR/micro-image/cd042e272e4e0cc1722c914df35368b7/ com.suse.bci.micro.supportlevel:l3 com.suse.bci.micro.title:SLE BCI 15 SP7 Micro com.suse.bci.micro.until:2031-07-31 com.suse.bci.micro.url:https://www.suse.com/products/base-container-images/ com.suse.bci.micro.vendor:SUSE LLC com.suse.bci.micro.version:15.7-57.1 com.suse.eula:sle-bci com.suse.lifecycle-url:https://www.suse.com/lifecycle#suse-linux-enterprise-server-15 com.suse.release-stage:released com.suse.supportlevel:l3 com.suse.supportlevel.until:2031-07-31 io.artifacthub.package.logo-url:https://avatars2.githubusercontent.com/u/19367275 io.artifacthub.package.readme-url:https://raw.githubusercontent.com/neuvector/neuvector/v5.5.3/README.md io.kubernetes.container.logpath:/var/log/pods/cattle-neuvector-system_neuvector-enforcer-pod-jb4p6_4f788959-d8c5-4548-87fc-613c85b6ccca/neuvector-enforcer-pod/0.log io.kubernetes.container.name:neuvector-enforcer-pod io.kubernetes.docker.type:container io.kubernetes.pod.name:neuvector-enforcer-pod-jb4p6 io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:4f788959-d8c5-4548-87fc-613c85b6ccca io.kubernetes.sandbox.id:2fce69dda7fcf7f2d871d42934a095991773945dc893fa6731312a3c44e81a12 name:enforcer neuvector.image:neuvector/enforcer neuvector.rev:5aa6d37 neuvector.role:enforcer org.openbuildservice.disturl:obs://build.suse.de/SUSE:SLE-15-SP7:Update:CR/containers/cd042e272e4e0cc1722c914df35368b7-micro-image org.opencontainers.image.authors:https://github.com/SUSE/bci/discussions org.opencontainers.image.created:2026-06-11T12:36:50.331594000Z org.opencontainers.image.description:SUSE Security Enforcer org.opencontainers.image.ref.name:15.7-57.1 org.opencontainers.image.source:https://github.com/neuvector/neuvector/ org.opencontainers.image.title:SUSE Security Enforcer org.opencontainers.image.url:https://www.suse.com/products/base-container-images/ org.opencontainers.image.vendor:SUSE LLC org.opencontainers.image.version:v5.5.3 org.opensuse.reference:neuvector/enforcer:v5.5.3 vendor:SUSE Security] CreatedAt:2026-07-08 08:33:04.709728491 +0000 UTC StartedAt:2026-07-08 08:33:05.256538992 +0000 UTC JoinedAt:2026-07-08 08:33:22.681342292 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.101 RPCServerPort:18401 Pid:16008 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.101 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]}}
+2026-07-08T08:52:21.632|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=2d5ce8252a9b47ba08e2d9d8c3875388624bc2b55d8abbb246481255eff5155b ip=10.42.0.101
+2026-07-08T08:52:21.632|INFO|CTL|cache.addrDeviceAdd: - count=1
+2026-07-08T08:52:21.632|INFO|CTL|cache.connectAgentAdd: - id=2d5ce8252a9b47ba08e2d9d8c3875388624bc2b55d8abbb246481255eff5155b name=k8s_neuvector-enforcer-pod_neuvector-enforcer-pod-jb4p6_cattle-neuvector-system_4f788959-d8c5-4548-87fc-613c85b6ccca_0
+2026-07-08T08:52:21.641|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.capi-controller-manager.cattle-capi-system groupRemovalDelay=24h0m10s timertask=eebc1f3528054399960d9a4477bd0f12
+2026-07-08T08:52:21.642|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.metrics-server.kube-system groupRemovalDelay=24h0m10s timertask=733f97cf6fce412b8b7f947ef56c26ba
+2026-07-08T08:52:21.643|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.cert-manager-cainjector.cert-manager groupRemovalDelay=24h0m10s timertask=3c0f524d8e564ce6ba278107f20ea9b8
+2026-07-08T08:52:21.644|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.fleet-controller.cattle-fleet-system groupRemovalDelay=24h0m10s timertask=3f02027988a0433a936f874cd0ff2887
+2026-07-08T08:52:21.645|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.rancher-turtles-controller-manager.cattle-turtles-system groupRemovalDelay=24h0m10s timertask=88291c4ce7794a74bc89f7398311795c
+2026-07-08T08:52:21.647|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.helmops.cattle-fleet-system groupRemovalDelay=24h0m10s timertask=bb9a492f0cdf4bf5a0077882abac4237
+2026-07-08T08:52:21.648|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.svclb-traefik.kube-system groupRemovalDelay=24h0m10s timertask=d81241f7a96649838a03b27d402d52f4
+2026-07-08T08:52:21.649|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.rancher-webhook.cattle-system groupRemovalDelay=24h0m10s timertask=5f814e84f19744b3b5636fe16eedfe18
+2026-07-08T08:52:21.65 |INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.fleet-agent.cattle-fleet-local-system groupRemovalDelay=24h0m10s timertask=ee4ec65949174219806f24d38a4d536f
+2026-07-08T08:52:21.651|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.cert-manager.cert-manager groupRemovalDelay=24h0m10s timertask=12442de134af41ad973e0f117b9fb09a
+2026-07-08T08:52:21.658|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-enforcer-pod-jb4p6_cattle-neuvector-system_4f788959-d8c5-4548-87fc-613c85b6ccca_0
+2026-07-08T08:52:21.658|INFO|CTL|cache.addrDeviceAdd: renew ip-device map - id=2fce69dda7fcf7f2d871d42934a095991773945dc893fa6731312a3c44e81a12 ip=10.42.0.101
+2026-07-08T08:52:21.658|INFO|CTL|cache.addrDeviceAdd: - count=1
+2026-07-08T08:52:21.659|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.traefik.kube-system groupRemovalDelay=24h0m10s timertask=1c560e1dcc5a4eb39471ac6ff0065e55
+2026-07-08T08:52:21.666|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.rancher-scc-operator.cattle-scc-system groupRemovalDelay=24h0m10s timertask=a816fd254b63464da0395037bbb331a1
+2026-07-08T08:52:21.667|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.rancher.cattle-system groupRemovalDelay=24h0m10s timertask=bb66cf22bc8549cebc6b63ca67f3b7bc
+2026-07-08T08:52:21.668|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.gitjob.cattle-fleet-system groupRemovalDelay=24h0m10s timertask=ec99b7a9daa34bde838ae30d47f12f20
+2026-07-08T08:52:21.669|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.coredns.kube-system groupRemovalDelay=24h0m10s timertask=c9ead1dd22b54231bfe8fcf9674e4e35
+2026-07-08T08:52:21.67 |INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.helm-operation.cattle-system groupRemovalDelay=24h0m10s timertask=78e5d6577acf4e74b8f2392849625683
+2026-07-08T08:52:21.671|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-scanner-pod-5d5d6449d4-vgzxk_cattle-neuvector-system_40235479-64b0-4f79-b5c1-5750b2ab5c4d_0
+2026-07-08T08:52:21.671|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=51b2d9d27f0b29ea34460af1a9524de50699d5eec3e5272a8c1e891ec56e2b88 ip=10.42.0.102
+2026-07-08T08:52:21.671|INFO|CTL|cache.addrDeviceAdd: - count=2
+2026-07-08T08:52:21.672|INFO|CTL|cache.scheduleGroupRemoval: Timertask scheduled - group=nv.cert-manager-webhook.cert-manager groupRemovalDelay=24h0m10s timertask=72912ac382314613aa7cbef01a6ce55c
+2026-07-08T08:52:21.684|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-enforcer-pod_neuvector-enforcer-pod-jb4p6_cattle-neuvector-system_4f788959-d8c5-4548-87fc-613c85b6ccca_0
+2026-07-08T08:52:21.684|INFO|CTL|cache.addrDeviceAdd: - count=2
+2026-07-08T08:52:21.769|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-scanner-pod_neuvector-scanner-pod-5d5d6449d4-vgzxk_cattle-neuvector-system_40235479-64b0-4f79-b5c1-5750b2ab5c4d_0
+2026-07-08T08:52:21.769|INFO|CTL|cache.addrDeviceAdd: - count=2
+2026-07-08T08:52:21.892|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-controller-pod-59d57b7bb-2lnkx_cattle-neuvector-system_0755ea6f-e290-486f-8abc-62961a6ee66c_0
+2026-07-08T08:52:21.892|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564 ip=10.42.0.110
+2026-07-08T08:52:21.892|INFO|CTL|cache.addrDeviceAdd: - count=3
+2026-07-08T08:52:21.893|INFO|CTL|cache.workloadUpdate: Delete - NVcontainer=k8s_init_neuvector-controller-pod-59d57b7bb-2lnkx_cattle-neuvector-system_0755ea6f-e290-486f-8abc-62961a6ee66c_0
+2026-07-08T08:52:21.893|INFO|CTL|cache.workloadUpdate: Delete - NVcontainer=k8s_prime-config-container_neuvector-controller-pod-59d57b7bb-2lnkx_cattle-neuvector-system_0755ea6f-e290-486f-8abc-62961a6ee66c_0
+2026-07-08T08:52:21.893|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-controller-pod_neuvector-controller-pod-59d57b7bb-2lnkx_cattle-neuvector-system_0755ea6f-e290-486f-8abc-62961a6ee66c_0
+2026-07-08T08:52:21.893|INFO|CTL|cache.addrDeviceAdd: - count=3
+2026-07-08T08:52:21.893|INFO|CTL|cache.controllerUpdate: Add or update controller - controller={CLUSDevice:{ID:cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564 Name:k8s_neuvector-controller-pod_neuvector-controller-pod-59d57b7bb-2lnkx_cattle-neuvector-system_0755ea6f-e290-486f-8abc-62961a6ee66c_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-59d57b7bb-2lnkx io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:0755ea6f-e290-486f-8abc-62961a6ee66c name:controller neuvector.role:controller pod-template-hash:59d57b7bb release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 08:35:16.183383179 +0000 UTC StartedAt:2026-07-08 08:35:16.183383179 +0000 UTC JoinedAt:2026-07-08 08:35:26.600319726 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.110 RPCServerPort:18400 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.110 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:true OrchConnStatus:connected OrchConnLastError: ReadPrimeConfig:true}
+2026-07-08T08:52:21.893|INFO|CTL|cache.addrDeviceAdd: renew ip-device map - id=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564 ip=10.42.0.110
+2026-07-08T08:52:21.893|INFO|CTL|cache.addrDeviceAdd: - count=3
+2026-07-08T08:52:21.893|INFO|CTL|cache.connectControllerAdd: - id=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564 name=k8s_neuvector-controller-pod_neuvector-controller-pod-59d57b7bb-2lnkx_cattle-neuvector-system_0755ea6f-e290-486f-8abc-62961a6ee66c_0
+2026-07-08T08:52:21.893|INFO|CTL|cache.workloadUpdate: Delete - NVcontainer=k8s_neuvector-cert-upgrader-pod_neuvector-cert-upgrader-job-shrhp_cattle-neuvector-system_ffc7d794-02b5-4254-8c69-ac11dfeac5a5_0
+2026-07-08T08:52:21.894|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-manager-pod-598d9ddd8b-dc4vv_cattle-neuvector-system_e501dea3-d579-4764-97a8-6a23c2638c00_0
+2026-07-08T08:52:21.894|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=fbb2f84c59e2733febcbaf4914fa8dd069bbd5525cff7dd9caf07e9b19dff0fa ip=10.42.0.114
+2026-07-08T08:52:21.894|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T08:52:21.894|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-manager-pod_neuvector-manager-pod-598d9ddd8b-dc4vv_cattle-neuvector-system_e501dea3-d579-4764-97a8-6a23c2638c00_0
+2026-07-08T08:52:21.894|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T08:52:21.894|INFO|CTL|cache.workloadUpdate: Delete - NVcontainer=k8s_init_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0
+2026-07-08T08:52:21.894|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0
+2026-07-08T08:52:21.894|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb ip=10.42.0.113
+2026-07-08T08:52:21.894|INFO|CTL|cache.addrDeviceAdd: - count=5
+2026-07-08T08:52:21.894|INFO|CTL|cache.hostUpdate: Add or update host - host={ID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Name:lima-rancher-desktop Runtime:docker Platform:Kubernetes Flavor:Rancher CloudPlatform: Network:Default RuntimeVer:29.1.3 RuntimeAPIVer:1.52 OS:Alpine Linux v3.23 Kernel:6.6.119-0-virt CPUs:8 Memory:25161457664 Ifaces:map[eth0:[{IPNet:{IP:192.168.5.15 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}] vznat:[{IPNet:{IP:192.168.64.4 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}]] TunnelIP:[{IP:10.42.0.1 Mask:ffffff00} {IP:10.42.0.0 Mask:ffffffff}] CapDockerBench:true CapKubeBench:true StorageDriver:overlayfs CgroupVersion:2}
+2026-07-08T08:52:21.894|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-controller-pod_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0
+2026-07-08T08:52:21.894|INFO|CTL|cache.addrDeviceAdd: - count=5
+2026-07-08T08:52:21.895|INFO|CTL|cache.controllerUpdate: Add or update controller - controller={CLUSDevice:{ID:6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb Name:k8s_neuvector-controller-pod_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-67867bc77c-lwqd4 io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:bda887d3-7932-45b3-a43b-513911715a41 name:controller neuvector.role:controller pod-template-hash:67867bc77c release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 08:52:04.988500952 +0000 UTC StartedAt:2026-07-08 08:52:04.988500952 +0000 UTC JoinedAt:2026-07-08 08:52:15.482864707 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.113 RPCServerPort:18400 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.113 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:false OrchConnStatus:connected OrchConnLastError: ReadPrimeConfig:true}
+2026-07-08T08:52:21.895|INFO|CTL|cache.addrDeviceAdd: renew ip-device map - id=6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb ip=10.42.0.113
+2026-07-08T08:52:21.895|INFO|CTL|cache.addrDeviceAdd: - count=5
+2026-07-08T08:52:21.895|INFO|CTL|cache.connectControllerAdd: - id=6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb name=k8s_neuvector-controller-pod_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0
+2026-07-08T08:52:29.527|INFO|CTL|cache.ScannerUpdateHandler: - cvedb=4.217 entries=382963
+2026-07-08T08:52:29.527|INFO|CTL|cache.ScannerUpdateHandler: Add or update scanner - scanner={ID:10.42.0.102 CVEDBVersion:4.217 CVEDBCreateTime:2026-07-05T20:44:26Z JoinedAt:2026-07-08 08:34:35.345054993 +0000 UTC RPCServer:10.42.0.102 RPCServerPort:18402 BuiltIn:false CVEDBEntries:276503 ScanCredit:2 MaxConcurrentScansPerScanner:2}
+2026-07-08T08:52:29.527|INFO|CTL|scan.AddScanner: - id=10.42.0.102
+2026-07-08T08:52:35.443|INFO|CTL|cluster.StartCluster.func2: Lead check timer expired
+2026-07-08T08:52:35.443|INFO|CTL|cluster.StartCluster.func2: Lead elected - lead=10.42.0.110:18300
+2026-07-08T08:53:16.144|INFO|CTL|cache.controllerUpdate: Delete controller - controller=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564
+2026-07-08T08:53:16.144|INFO|CTL|cache.addrDeviceDelete: delay remove ip-device map - id=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564 ip=10.42.0.110
+2026-07-08T08:53:16.83 |INFO|CTL|main.ctlrMemberUpdateHandler: - member=10.42.0.110 type=delete
+2026-07-08T08:53:16.83 |INFO|CTL|cache.memberStateUpdateHandler: - agentID= flag=3 member=10.42.0.110 notify=delete
+2026-07-08T08:53:16.831|INFO|CTL|cluster.StartCluster.func1: - newLead=10.42.0.113 oldLead=10.42.0.110
+2026-07-08T08:53:16.831|INFO|CTL|main.leadChangeHandler: - exiting=0 isNewLead=true newLead=10.42.0.113 oldLead=10.42.0.110
+2026-07-08T08:53:16.832|INFO|CTL|main.setConfigLoaded: Set config loaded flag.
+2026-07-08T08:53:16.839|INFO|CTL|cache.LeadChangeNotify: - isLeader=true leadAddr=10.42.0.113
+2026-07-08T08:53:16.842|INFO|CTL|cache.SchedulePruneGroups: group prune timertask scheduled - timertask=ee555d9296a2474c85826693b9f4515e
+2026-07-08T08:53:16.846|INFO|CTL|cache.ScannerChangeNotify: - isScanner=true
+2026-07-08T08:53:16.846|INFO|CTL|scan.LeadChangeNotify: - leader=true
+2026-07-08T08:53:16.846|INFO|CTL|scan.ScannerChangeNotify: - scanner=true
+2026-07-08T08:53:16.846|INFO|CTL|rest.LeadChangeNotify: - _isLeader=0 isLeader=true
+2026-07-08T08:53:16.856|INFO|CTL|cache.controllerUpdate: Add or update controller - controller={CLUSDevice:{ID:6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb Name:k8s_neuvector-controller-pod_neuvector-controller-pod-67867bc77c-lwqd4_cattle-neuvector-system_bda887d3-7932-45b3-a43b-513911715a41_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-67867bc77c-lwqd4 io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:bda887d3-7932-45b3-a43b-513911715a41 name:controller neuvector.role:controller pod-template-hash:67867bc77c release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 08:52:04.988500952 +0000 UTC StartedAt:2026-07-08 08:52:04.988500952 +0000 UTC JoinedAt:2026-07-08 08:52:15.482864707 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.113 RPCServerPort:18400 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.113 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:true OrchConnStatus:connected OrchConnLastError: ReadPrimeConfig:true}
+2026-07-08T08:53:16.856|INFO|CTL|cache.addrDeviceAdd: renew ip-device map - id=6844f2aed44c714160fd41e6c47e87c21f4119117102ad7318efd2ac1c4e7ccb ip=10.42.0.113
+2026-07-08T08:53:16.856|INFO|CTL|cache.addrDeviceAdd: - count=5
+2026-07-08T08:53:28.271|INFO|CTL|cache.hostUpdate: Add or update host - host={ID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Name:lima-rancher-desktop Runtime:docker Platform:Kubernetes Flavor:Rancher CloudPlatform: Network:Default RuntimeVer:29.1.3 RuntimeAPIVer:1.52 OS:Alpine Linux v3.23 Kernel:6.6.119-0-virt CPUs:8 Memory:25161457664 Ifaces:map[eth0:[{IPNet:{IP:192.168.5.15 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}] vznat:[{IPNet:{IP:192.168.64.4 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}]] TunnelIP:[{IP:10.42.0.0 Mask:ffffffff} {IP:10.42.0.1 Mask:ffffff00}] CapDockerBench:true CapKubeBench:true StorageDriver:overlayfs CgroupVersion:2}
+2026-07-08T08:53:28.29 |INFO|CTL|cache.hostUpdate: Add or update host - host={ID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Name:lima-rancher-desktop Runtime:docker Platform:Kubernetes Flavor:Rancher CloudPlatform: Network:Default RuntimeVer:29.1.3 RuntimeAPIVer:1.52 OS:Alpine Linux v3.23 Kernel:6.6.119-0-virt CPUs:8 Memory:25161457664 Ifaces:map[eth0:[{IPNet:{IP:192.168.5.15 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}] vznat:[{IPNet:{IP:192.168.64.4 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}]] TunnelIP:[{IP:10.42.0.1 Mask:ffffff00} {IP:10.42.0.0 Mask:ffffffff}] CapDockerBench:true CapKubeBench:true StorageDriver:overlayfs CgroupVersion:2}
+2026-07-08T08:53:28.381|INFO|CTL|cache.addrDeviceDeleteByID: delay remove ip-device map - id=cedd7aa826a79e6a0ccf984ad9b013de77d7c140bebd41ec9a9b041969763564 ip=10.42.0.110
+2026-07-08T08:53:34.152|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:53:34.152|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:53:34.152|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:53:35.203|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:53:35.203|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:53:35.203|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:53:36.247|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:53:36.247|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:53:36.247|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:56:42.094|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:42.094|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:42.094|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:56:43.138|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:43.138|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:43.138|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:56:45.3  |ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:45.3  |ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:45.3  |ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:56:46.335|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:46.335|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:46.335|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:56:48.035|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:48.035|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:48.035|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=
+2026-07-08T08:56:49.061|ERRO|CTL|rest.sendRestReqInternal: Failed to make request - err=Get "https://rancher.localhost/v3/users?me=true": dial tcp 127.0.0.1:443: connect: connection refused proxyOption=0 timeout=10s url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:49.061|ERRO|CTL|rest.checkRancherUserRole: - data= err=dial tcp 127.0.0.1:443: connect: connection refused url=https://rancher.localhost/v3/users?me=true
+2026-07-08T08:56:49.061|ERRO|CTL|rest.checkRancherUserRole: - proxyUsed=false statusCode=0 user=

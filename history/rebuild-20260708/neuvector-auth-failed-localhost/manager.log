@@ -1,0 +1,60 @@
+FIPS mode not detected. Using default security configuration.
+2026-07-08 08:52:03,601|INFO |MANAGER|apache.pekko.event.slf4j.Slf4jLogger(applyOrElse:117): Slf4jLogger started
+2026-07-08 08:52:04,845|INFO |MANAGER|com.neu.web.Rest$($init$:81): Starting server in HTTPS mode (MANAGER_SSL=on).
+2026-07-08 08:52:05,060|INFO |MANAGER|com.neu.web.Rest$($init$$$anonfun$3:95): Server is listening on /[0:0:0:0:0:0:0:0]:8443
+2026-07-08 08:53:33,597|INFO |MANAGER|com.neu.web.Rest$(sslContext:48): Import manager's certificate and private key to manager's keystore
+2026-07-08 08:53:33,836|INFO |MANAGER|com.neu.web.Rest$(loadCertificateAndKey:201): PKCS#1 private key is being used
+2026-07-08 08:53:34,043|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:53:34,060|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:53:34,161|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:53:35,198|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:53:35,199|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:53:35,205|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:53:36,239|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:53:36,242|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:53:36,249|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:56:42,058|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:56:42,064|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:56:42,097|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:56:43,129|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:56:43,131|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:56:43,140|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:56:45,293|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:56:45,295|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:56:45,301|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:56:46,329|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:56:46,331|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:56:46,337|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:56:48,025|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:56:48,027|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:56:48,036|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})
+2026-07-08 08:56:49,056|INFO |MANAGER|com.neu.service.authentication.SuseAuthService(performLogin:76): post path auth
+2026-07-08 08:56:49,057|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1:56): Sending Request
+HttpRequest(HttpMethod(POST),https://neuvector-svc-controller.cattle-neuvector-system:10443/v1/auth,List(X-R-Sess: toke****5gl),HttpEntity.Strict(text/plain; charset=UTF-8,90 bytes total),HttpProtocol(HTTP/1.1))
+2026-07-08 08:56:49,063|INFO |MANAGER|com.neu.client.RestClient$(sendReceiver$$anonfun$1$$anonfun$1:86): Received Response - Failure
+StatusCode: 401 Reason: Unauthorized
+ Exception: FulfilledFuture({"code":3,"error":"Authentication failed","message":"Authentication failed"})

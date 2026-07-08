@@ -1,0 +1,32 @@
+NAMESPACE                   NAME                                                  READY   STATUS      RESTARTS      AGE     IP            NODE                   NOMINATED NODE   READINESS GATES
+cattle-capi-system          capi-controller-manager-665fc47d9-kfhtf               1/1     Running     1 (51m ago)   58m     10.42.0.93    lima-rancher-desktop   <none>           <none>
+cattle-fleet-local-system   fleet-agent-57bf575f84-dw9w7                          1/1     Running     1 (51m ago)   60m     10.42.0.90    lima-rancher-desktop   <none>           <none>
+cattle-fleet-system         fleet-controller-8c7954dfd-7hkcw                      3/3     Running     3 (51m ago)   61m     10.42.0.81    lima-rancher-desktop   <none>           <none>
+cattle-fleet-system         gitjob-7ffc766868-7bjsk                               1/1     Running     1 (51m ago)   61m     10.42.0.91    lima-rancher-desktop   <none>           <none>
+cattle-fleet-system         helmops-7f67477dd7-zjg5n                              1/1     Running     1 (51m ago)   61m     10.42.0.95    lima-rancher-desktop   <none>           <none>
+cattle-neuvector-system     neuvector-cert-upgrader-job-x5txp                     0/1     Completed   0             6m16s   10.42.0.123   lima-rancher-desktop   <none>           <none>
+cattle-neuvector-system     neuvector-controller-pod-57f8b8578f-6wwtf             1/1     Running     0             6m17s   10.42.0.121   lima-rancher-desktop   <none>           <none>
+cattle-neuvector-system     neuvector-enforcer-pod-frv6l                          1/1     Running     0             6m17s   10.42.0.120   lima-rancher-desktop   <none>           <none>
+cattle-neuvector-system     neuvector-manager-pod-6b44896886-bs8ft                1/1     Running     0             6m17s   10.42.0.119   lima-rancher-desktop   <none>           <none>
+cattle-neuvector-system     neuvector-scanner-pod-5d5d6449d4-q7854                1/1     Running     0             6m17s   10.42.0.122   lima-rancher-desktop   <none>           <none>
+cattle-scc-system           rancher-scc-operator-d4946cb85-kdpvs                  1/1     Running     1 (51m ago)   61m     10.42.0.85    lima-rancher-desktop   <none>           <none>
+cattle-system               helm-operation-7rrkw                                  0/2     Completed   0             59m     <none>        lima-rancher-desktop   <none>           <none>
+cattle-system               helm-operation-kp8g7                                  0/2     Completed   0             6m23s   10.42.0.118   lima-rancher-desktop   <none>           <none>
+cattle-system               helm-operation-ptjsm                                  0/2     Completed   0             7m25s   10.42.0.115   lima-rancher-desktop   <none>           <none>
+cattle-system               helm-operation-vl6ns                                  0/2     Completed   0             43m     10.42.0.98    lima-rancher-desktop   <none>           <none>
+cattle-system               helm-operation-vz7w4                                  0/2     Completed   0             47m     10.42.0.97    lima-rancher-desktop   <none>           <none>
+cattle-system               helm-operation-zs82c                                  0/2     Completed   0             39m     10.42.0.108   lima-rancher-desktop   <none>           <none>
+cattle-system               rancher-7464b75d-rclnx                                1/1     Running     1 (51m ago)   65m     10.42.0.94    lima-rancher-desktop   <none>           <none>
+cattle-system               rancher-webhook-84d879987d-mgwrn                      1/1     Running     1 (51m ago)   61m     10.42.0.82    lima-rancher-desktop   <none>           <none>
+cattle-system               system-upgrade-controller-6d8b8567f8-sjgwr            1/1     Running     1 (51m ago)   59m     10.42.0.87    lima-rancher-desktop   <none>           <none>
+cattle-turtles-system       rancher-turtles-controller-manager-57744d846f-z8twk   1/1     Running     1 (51m ago)   60m     10.42.0.88    lima-rancher-desktop   <none>           <none>
+cert-manager                cert-manager-559776c68d-vglx4                         1/1     Running     2 (51m ago)   106m    10.42.0.89    lima-rancher-desktop   <none>           <none>
+cert-manager                cert-manager-cainjector-7cdf9b4bd8-4bt7n              1/1     Running     2 (51m ago)   106m    10.42.0.83    lima-rancher-desktop   <none>           <none>
+cert-manager                cert-manager-webhook-5f7fd7899-vq5cz                  1/1     Running     2 (51m ago)   106m    10.42.0.96    lima-rancher-desktop   <none>           <none>
+kube-system                 coredns-8b64bcf7c-q8pt2                               1/1     Running     3 (51m ago)   113m    10.42.0.86    lima-rancher-desktop   <none>           <none>
+kube-system                 helm-install-traefik-crd-dd8jl                        0/1     Completed   0             113m    <none>        lima-rancher-desktop   <none>           <none>
+kube-system                 helm-install-traefik-qjl9g                            0/1     Completed   1             113m    <none>        lima-rancher-desktop   <none>           <none>
+kube-system                 local-path-provisioner-5d9d9885bc-z2k76               1/1     Running     3 (51m ago)   113m    10.42.0.92    lima-rancher-desktop   <none>           <none>
+kube-system                 metrics-server-786d997795-rm6rd                       1/1     Running     3 (51m ago)   113m    10.42.0.84    lima-rancher-desktop   <none>           <none>
+kube-system                 svclb-traefik-3f7606c3-c688j                          2/2     Running     6 (51m ago)   112m    10.42.0.79    lima-rancher-desktop   <none>           <none>
+kube-system                 traefik-d98ccfdf6-jf28g                               1/1     Running     3 (51m ago)   112m    10.42.0.80    lima-rancher-desktop   <none>           <none>

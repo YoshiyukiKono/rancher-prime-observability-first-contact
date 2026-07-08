@@ -1,0 +1,15 @@
+controller:
+  replicas: 1
+cve:
+  scanner:
+    replicas: 1
+global:
+  cattle:
+    clusterId: local
+    clusterName: local
+    rkePathPrefix: ""
+    rkeWindowsPathPrefix: ""
+    systemDefaultRegistry: registry.rancher.com
+    systemProjectId: p-29mzm
+    url: https://rancher.cattle-system.svc
+  systemDefaultRegistry: registry.rancher.com

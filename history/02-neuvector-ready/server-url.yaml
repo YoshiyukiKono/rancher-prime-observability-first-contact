@@ -1,0 +1,12 @@
+apiVersion: management.cattle.io/v3
+customized: false
+default: ""
+kind: Setting
+metadata:
+  creationTimestamp: "2026-07-08T07:30:00Z"
+  generation: 3
+  name: server-url
+  resourceVersion: "28261"
+  uid: 6c8b8739-e710-4827-821a-721e76bb08df
+source: ""
+value: https://rancher.cattle-system.svc

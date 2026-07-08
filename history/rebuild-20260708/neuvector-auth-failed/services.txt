@@ -1,0 +1,5 @@
+NAME                              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                         AGE
+neuvector-service-webui           ClusterIP   10.43.133.11   <none>        8443/TCP                        11m
+neuvector-svc-admission-webhook   ClusterIP   10.43.72.141   <none>        443/TCP                         11m
+neuvector-svc-controller          ClusterIP   None           <none>        18300/TCP,18301/TCP,18301/UDP   11m
+neuvector-svc-crd-webhook         ClusterIP   10.43.49.36    <none>        443/TCP                         11m

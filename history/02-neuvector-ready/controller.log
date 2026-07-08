@@ -1,0 +1,200 @@
+2026-07-08T09:08:02.269|INFO|CTL|main.main: start initializing k8s internal secret controller and wait for internal secret creation if it's not created
+2026-07-08T09:08:02.274|INFO|CTL|migration.(*InternalSecretController).ReloadSecret: internal certificate is not ready yet.
+2026-07-08T09:08:04.139|INFO|CTL|migration.(*InternalSecretController).secretUpdate: Internal secret is up-to-date - rev=28923
+2026-07-08T09:08:04.174|INFO|CTL|migration.InitializeInternalSecretController: cache is synced and internal cert is ready
+2026-07-08T09:08:04.174|INFO|CTL|main.main: internal certificate is initialized
+2026-07-08T09:08:04.189|INFO|CTL|ruleid.Init: UUID: 
+2026-07-08T09:08:04.189|INFO|CTL|cluster.FillClusterAddrs: - advertise=10.42.0.121 join=neuvector-svc-controller.cattle-neuvector-system
+2026-07-08T09:08:04.189|INFO|CTL|ruleid.(*uuidPRuleCache).ruleIdTimerLoop: UUID: timer starts
+2026-07-08T09:08:05.194|INFO|CTL|cluster.FillClusterAddrs: resolve - join=neuvector-svc-controller.cattle-neuvector-system retry=1
+2026-07-08T09:08:05.198|INFO|CTL|utils.SetReady: - value=cluster init
+2026-07-08T09:08:07.199|INFO|CTL|cluster.FillClusterAddrs: resolve - join=neuvector-svc-controller.cattle-neuvector-system retry=2
+2026-07-08T09:08:11.202|INFO|CTL|cluster.FillClusterAddrs: resolve - join=neuvector-svc-controller.cattle-neuvector-system retry=3
+2026-07-08T09:08:19.206|INFO|CTL|cluster.FillClusterAddrs: resolve - join=neuvector-svc-controller.cattle-neuvector-system retry=4
+2026-07-08T09:08:19.208|INFO|CTL|cluster.(*consulMethod).Start: - config=&{ID:c2a71ff5655c836214b732062aa965343a60fcbf994d78de90a73af34ccc69cf Server:true Debug:false Ifaces:map[eth0:[{IPNet:{IP:10.42.0.121 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]] JoinAddr:neuvector-svc-controller.cattle-neuvector-system joinAddrList:[10.42.0.121] BindAddr:10.42.0.121 AdvertiseAddr:10.42.0.121 DataCenter:neuvector RPCPort:0 LANPort:0 WANPort:0 EnableDebug:false} recover=false
+2026-07-08T09:08:19.208|INFO|CTL|cluster.(*consulMethod).Start: - node-id=1f4ef823-fb50-eac3-e1c6-f2f07c496452
+2026-07-08T09:08:19.209|INFO|CTL|cluster.(*consulMethod).Start: Consul start - args=[agent -datacenter neuvector -data-dir /tmp/neuvector -server -bootstrap -config-file /tmp/neuvector/consul.json -bind 10.42.0.121 -advertise 10.42.0.121 -node 10.42.0.121 -node-id 1f4ef823-fb50-eac3-e1c6-f2f07c496452 -raft-protocol 3]
+==> Starting Consul agent...
+               Version: '1.16.4'
+            Build Date: '1970-01-01 00:00:01 +0000 UTC'
+               Node ID: '1f4ef823-fb50-eac3-e1c6-f2f07c496452'
+             Node name: '10.42.0.121'
+            Datacenter: 'neuvector' (Segment: '<all>')
+                Server: true (Bootstrap: true)
+           Client Addr: [127.0.0.1] (HTTP: 8500, HTTPS: -1, gRPC: -1, gRPC-TLS: -1, DNS: -1)
+          Cluster Addr: 10.42.0.121 (LAN: 18301, WAN: -1)
+     Gossip Encryption: true
+      Auto-Encrypt-TLS: false
+           ACL Enabled: false
+     Reporting Enabled: false
+    ACL Default Policy: allow
+             HTTPS TLS: Verify Incoming: true, Verify Outgoing: true, Min Version: TLSv1_2
+              gRPC TLS: Verify Incoming: false, Min Version: TLSv1_2
+      Internal RPC TLS: Verify Incoming: true, Verify Outgoing: true (Verify Hostname: false), Min Version: TLSv1_2
+
+==> Log data will now stream in as it occurs:
+
+2026-07-08T09:08:29.218|INFO|CTL|utils.SetReady: - value=ctrl init done
+2026-07-08T09:08:29.219|INFO|CTL|cluster.StartCluster: - lead=10.42.0.121
+2026-07-08T09:08:29.562|INFO|CTL|resource.GetNvControllerPodsNumber: - err=<nil> limits= pods=10.42.0.121/32 requests=
+2026-07-08T09:08:29.563|INFO|CTL|main.main: - cspEnv= ctrler={CLUSDevice:{ID:c2a71ff5655c836214b732062aa965343a60fcbf994d78de90a73af34ccc69cf Name:k8s_neuvector-controller-pod_neuvector-controller-pod-57f8b8578f-6wwtf_cattle-neuvector-system_9c4ea366-89ec-48af-8a9e-49eb2cd775b8_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-57f8b8578f-6wwtf io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:9c4ea366-89ec-48af-8a9e-49eb2cd775b8 name:controller neuvector.role:controller pod-template-hash:57f8b8578f release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 09:08:02.066434075 +0000 UTC StartedAt:2026-07-08 09:08:02.066434075 +0000 UTC JoinedAt:2026-07-08 09:08:29.289358296 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.121 RPCServerPort:18400 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.121 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:true OrchConnStatus: OrchConnLastError: ReadPrimeConfig:true} lead=10.42.0.121 new-cluster=true noDefAdmin=false self=10.42.0.121
+2026-07-08T09:08:29.791|INFO|CTL|kv.SetNextKeyRotationTime: - nextRotationTime=1791277709
+2026-07-08T09:08:29.793|INFO|CTL|kv.(*clusterHelper).GetInstallationID: installation ID is updated - id=85ce9d4137c941c4993b35cf62a7ce14
+2026-07-08T09:08:29.8  |ERRO|CTL|resource.retrieveSecretData: - err=kubernetes api: Failure 404 secrets "neuvector-store-secret" not found secretName=neuvector-store-secret
+2026-07-08T09:08:29.805|INFO|CTL|main.main: Kubernetes secret neuvector-store-secret is created
+2026-07-08T09:08:29.805|INFO|CTL|main.main: store passphrase generate/read
+2026-07-08T09:08:29.816|INFO|CTL|main.main: - emptyKvFound=true ver={CtrlVersion: KVVersion:}
+2026-07-08T09:08:29.821|INFO|CTL|kv.(*configHelper).Restore:
+2026-07-08T09:08:29.821|INFO|CTL|kv.(*configHelper).Restore: Config persistence disabled
+2026-07-08T09:08:29.821|INFO|CTL|main.main: - errRestore=<nil> restored=false
+2026-07-08T09:08:29.826|INFO|CTL|kv.clusterHelper.UpgradeClusterKV: Before upgrade - version=&{CtrlVersion: KVVersion:}
+2026-07-08T09:08:29.828|ERRO|CTL|resource.retrieveSecretData: - err=kubernetes api: Failure 404 secrets "neuvector-bootstrap-secret" not found secretName=neuvector-bootstrap-secret
+2026-07-08T09:08:30.123|INFO|CTL|kv.clusterHelper.UpgradeClusterKV: After upgrade - version=&{CtrlVersion:v5.5.3 KVVersion:94444768}
+2026-07-08T09:08:30.135|INFO|CTL|kv.clusterHelper.FixMissingClusterKV: Re-create because not found - key=object/config/group/fed.nodes
+2026-07-08T09:08:30.136|INFO|CTL|kv.clusterHelper.FixMissingClusterKV: Re-create because not found - key=object/config/group/fed.containers
+2026-07-08T09:08:30.139|INFO|CTL|kv.ValidateWebhookCert:
+2026-07-08T09:08:30.139|ERRO|CTL|kv.clusterHelper.GetObjectCertRev: - cn=rootCA error=Key not found
+2026-07-08T09:08:30.14 |INFO|CTL|kv.restoreKeyCertFromOldKvKey: no cert/key - cn=rootCA err1=<nil> err2=<nil> len1=0 len2=0
+2026-07-08T09:08:30.14 |INFO|CTL|kv.ValidateWebhookCert: regen - cn=rootCA
+2026-07-08T09:08:30.183|INFO|CTL|kv.StoreKeyCertFilesInKV: store key/cert in new kv
+2026-07-08T09:08:30.607|ERRO|CTL|kv.clusterHelper.GetObjectCertRev: - cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc error=Key not found
+2026-07-08T09:08:30.607|INFO|CTL|kv.restoreKeyCertFromOldKvKey: no cert/key - cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc err1=<nil> err2=<nil> len1=0 len2=0
+2026-07-08T09:08:30.607|INFO|CTL|kv.ValidateWebhookCert: regen - cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc
+2026-07-08T09:08:30.686|INFO|CTL|kv.StoreKeyCertFilesInKV: store key/cert in new kv
+2026-07-08T09:08:31.149|ERRO|CTL|kv.clusterHelper.GetObjectCertRev: - cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc error=Key not found
+2026-07-08T09:08:31.149|INFO|CTL|kv.restoreKeyCertFromOldKvKey: no cert/key - cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc err1=<nil> err2=<nil> len1=0 len2=0
+2026-07-08T09:08:31.149|INFO|CTL|kv.ValidateWebhookCert: regen - cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc
+2026-07-08T09:08:31.216|INFO|CTL|kv.StoreKeyCertFilesInKV: store key/cert in new kv
+2026-07-08T09:08:33.027|INFO|CTL|kv.ValidateWebhookCert: - err1=<nil> err2=<nil>
+2026-07-08T09:08:33.027|INFO|CTL|kv.ValidateWebhookCert: sha256 - cert=30354fce7921c0ecf9e4cd71e59556426507c57de35eb404e89e3f96fedc61c9 cn=rootCA
+2026-07-08T09:08:33.306|INFO|CTL|kv.verifyWebServerCert: - cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc customerCert=false san=[neuvector-svc-admission-webhook.cattle-neuvector-system.svc] subject=CN=neuvector-svc-admission-webhook.cattle-neuvector-system.svc,OU=Neuvector,O=Neuvector,L=EN,ST=CA,C=US
+2026-07-08T09:08:33.306|INFO|CTL|kv.ValidateWebhookCert: sha256 - cert=9ecd121699c402de5a4989cc4d125afc2088062825e56fd32033d4e6d1155512 cn=neuvector-svc-admission-webhook.cattle-neuvector-system.svc
+2026-07-08T09:08:33.587|INFO|CTL|kv.verifyWebServerCert: - cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc customerCert=false san=[neuvector-svc-crd-webhook.cattle-neuvector-system.svc] subject=CN=neuvector-svc-crd-webhook.cattle-neuvector-system.svc,OU=Neuvector,O=Neuvector,L=EN,ST=CA,C=US
+2026-07-08T09:08:33.587|INFO|CTL|kv.ValidateWebhookCert: sha256 - cert=b741f614daa478b6bcc70c422fd4dcaae952c8ee6703abf7e8d9b5f7cd138684 cn=neuvector-svc-crd-webhook.cattle-neuvector-system.svc
+2026-07-08T09:08:34.142|INFO|CTL|nvvalidatewebhookcfg.SetCABundle: sha256 - cert=9ecd121699c402de5a4989cc4d125afc2088062825e56fd32033d4e6d1155512 svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:34.421|INFO|CTL|nvvalidatewebhookcfg.SetCABundle: sha256 - cert=b741f614daa478b6bcc70c422fd4dcaae952c8ee6703abf7e8d9b5f7cd138684 svcName=neuvector-svc-crd-webhook
+2026-07-08T09:08:34.423|INFO|CTL|main.setConfigLoaded: Set config loaded flag.
+2026-07-08T09:08:34.425|INFO|CTL|cache.Init: - isLeader=true leadAddr=10.42.0.121
+2026-07-08T09:08:34.817|INFO|CTL|cache.startWorkerThread: - CheckKeyRotationDuration=1h0m0s KeyRotationDuration=2160h0m0s
+2026-07-08T09:08:34.818|INFO|CTL|cache.SchedulePruneGroups: group prune timertask scheduled - timertask=e539545a89c046f09b1261d1ee6c985b
+2026-07-08T09:08:34.821|INFO|CTL|cache.SyncLearnedPolicyFromCluster: - maxLearnRuleID=10000 total learned rules=0
+2026-07-08T09:08:34.835|INFO|CTL|cache.licenseInit:
+2026-07-08T09:08:34.836|INFO|CTL|cache.ScannerChangeNotify: - isScanner=true
+2026-07-08T09:08:34.837|INFO|CTL|scan.Init:
+2026-07-08T09:08:34.837|INFO|CTL|scan.ScannerChangeNotify: - scanner=true
+2026-07-08T09:08:34.839|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-updater-pod sa=neuvector
+2026-07-08T09:08:34.84 |INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-enforcer-pod sa=neuvector
+2026-07-08T09:08:34.841|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-scanner-pod sa=neuvector
+2026-07-08T09:08:34.842|ERRO|CTL|resource.getNeuvectorSvcAccount: resource no found - err=kubernetes api: Failure 404 deployments.apps "neuvector-registry-adapter-pod" not found name=neuvector-registry-adapter-pod rt=deployment
+2026-07-08T09:08:34.843|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-cert-upgrader-pod sa=neuvector
+2026-07-08T09:08:34.883|ERRO|CTL|resource.(*kubernetes).RegisterResource: fail to register - error=Failed to discover API group: image.openshift.io(decode error status 404: decode json: invalid character 'p' after top-level value) resource=image
+2026-07-08T09:08:34.984|INFO|CTL|main.(*orchConn).cbWatcherState: updating conn status - lastError= status=connected
+2026-07-08T09:08:35.906|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:35.912|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:35.955|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:35.958|INFO|CTL|rest.CrossCheckCrd: - kind=NvSecurityRule kvCrdKind=NvSecurityRule kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvsecurityrules
+2026-07-08T09:08:35.963|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:36.008|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:36.009|INFO|CTL|rest.CrossCheckCrd: - kind=NvClusterSecurityRule kvCrdKind=NvSecurityRule kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvclustersecurityrules
+2026-07-08T09:08:36.015|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:36.047|INFO|CTL|cache.startWorkerThread.func1: store passphrases reloaded
+2026-07-08T09:08:36.048|INFO|CTL|rest.CrossCheckCrd: - kind=NvAdmissionControlSecurityRule kvCrdKind=NvAdmissionControlSecurityRule kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvadmissioncontrolsecurityrules
+2026-07-08T09:08:36.108|INFO|CTL|rest.CrossCheckCrd: - kind=NvResponseRuleSecurityRule kvCrdKind=NvResponseRuleSecurityRule kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvresponserulesecurityrules
+2026-07-08T09:08:36.623|INFO|CTL|rest.CrossCheckCrd: - kind=NvDlpSecurityRule kvCrdKind=NvDlpSecurityRule kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvdlpsecurityrules
+2026-07-08T09:08:36.82 |INFO|CTL|rest.CrossCheckCrd: - kind=NvWafSecurityRule kvCrdKind=NvWafSecurityRule kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvwafsecurityrules
+2026-07-08T09:08:36.922|INFO|CTL|rest.CrossCheckCrd: - kind=NvVulnerabilityProfile kvCrdKind=NvVulnerabilityProfile kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvvulnerabilityprofiles
+2026-07-08T09:08:36.99 |INFO|CTL|rest.CrossCheckCrd: - kind=NvComplianceProfile kvCrdKind=NvComplianceProfile kvOnly=false len(objs)=0 len(recordList)=0 rscType=nvcomplianceprofiles
+2026-07-08T09:08:36.995|INFO|CTL|nvvalidatewebhookcfg.ConfigK8sAdmissionControl: Configured admission control in k8s - enable=true name=neuvector-validating-crd-webhook op=update
+2026-07-08T09:08:36.995|INFO|CTL|main.startGRPCServer: - port=18400
+2026-07-08T09:08:36.996|INFO|CTL|main.startGRPCServer: GRPC server started
+2026-07-08T09:08:36.996|INFO|CTL|rest.initCertificates: cert manager is configured. - period=30m0s threshold=720h0m0s validity_length_day=90
+2026-07-08T09:08:36.996|ERRO|CTL|kv.clusterHelper.GetObjectCertRev: - cn=neuvector-jwt-signing error=Key not found
+2026-07-08T09:08:36.996|INFO|CTL|kv.(*CertManager).CheckAndRenewCerts.(*CertManager).checkAndRotateCert.func1: certificate is not found.  Create it. - cn=neuvector-jwt-signing
+2026-07-08T09:08:37.507|INFO|CTL|rest.initCertificates.func2: new certificate is loaded - cn=neuvector-jwt-signing newExpiryDate=2026-10-06 09:08:36 +0000 UTC oldExpiryDate=<nil>
+2026-07-08T09:08:37.508|INFO|CTL|kv.(*CertManager).CheckAndRenewCerts.(*CertManager).checkAndRotateCert.func1: Certificate renewed. - cn=neuvector-jwt-signing generated_time=2026-07-08T09:08:37Z validity=2026-10-06T09:08:36Z
+2026-07-08T09:08:37.509|INFO|CTL|cache.SyncInit: - new-cluster=true
+2026-07-08T09:08:37.51 |INFO|CTL|cache.SyncInit: skip sync - self=true target=10.42.0.121
+2026-07-08T09:08:37.51 |INFO|CTL|rest.LoadInitCfg: - cfgmapTried=map[] load=true
+2026-07-08T09:08:37.511|INFO|CTL|rest.LoadInitCfg: done - cfgmapTried=map[] defAdminLoaded=false load=true
+2026-07-08T09:08:37.511|INFO|CTL|main.main: - defAdminLoaded=false defAdminRestored=false
+2026-07-08T09:08:37.511|INFO|CTL|cache.memberStateUpdateHandler: - agentID= flag=3 member=10.42.0.120 notify=connect
+2026-07-08T09:08:37.511|INFO|CTL|cache.memberStateUpdateHandler: - agentID= flag=3 member=10.42.0.121 notify=connect
+2026-07-08T09:08:37.514|INFO|CTL|rest.LeadChangeNotify: - _isLeader=0 isLeader=true
+2026-07-08T09:08:37.514|INFO|CTL|rest.initDefaultRegistries: - default registries=[https://docker.io/ https://index.docker.io/ https://registry.hub.docker.com/ https://registry-1.docker.io/]
+2026-07-08T09:08:37.515|INFO|CTL|rest.StartRESTServer: Start REST server - port=10443
+2026-07-08T09:08:37.515|INFO|CTL|rest.loadFedInitCfg:
+2026-07-08T09:08:37.516|INFO|CTL|rest.loadFedInitCfg: done
+2026-07-08T09:08:37.528|INFO|CTL|main.main.func4: Memory Snapshots - Snapshot_At=3865470566 Step=644245094
+2026-07-08T09:08:37.528|INFO|CTL|main.main.func4: Memory Resource - Controlled_At=4831838208 Controlled_Limit=6442450944
+2026-07-08T09:08:37.528|ERRO|CTL|system.(*SystemTools).MonitorMemoryPressureEvents: - error=not supported
+2026-07-08T09:08:37.528|ERRO|CTL|main.main.func4.1: MonitorMemoryPressureEvents - error=not supported
+2026-07-08T09:08:37.805|INFO|CTL|rest.loadX509KeyPair: sha256 - cert=b741f614daa478b6bcc70c422fd4dcaae952c8ee6703abf7e8d9b5f7cd138684 svcName=neuvector-svc-crd-webhook
+2026-07-08T09:08:37.805|INFO|CTL|rest.k8sWebhookRestServer: Started Admission REST server - port=30443 svcName=neuvector-svc-crd-webhook
+2026-07-08T09:08:37.81 |INFO|CTL|rest.loadX509KeyPair: sha256 - cert=9ecd121699c402de5a4989cc4d125afc2088062825e56fd32033d4e6d1155512 svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:37.81 |INFO|CTL|rest.k8sWebhookRestServer: Started Admission REST server - port=20443 svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:37.937|INFO|CTL|rest.restartWebhookServer: - svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:37.941|INFO|CTL|rest.k8sWebhookRestServer: Got signal, shutting down webhook server gracefully... - src=reload svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:37.941|ERRO|CTL|rest.k8sWebhookRestServer.func1: Failed to listen and serve webhook server - error=http: Server closed svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:38.092|INFO|CTL|cache.AgentAdmissionRequest: Receive connect request - host=lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c id=66d2750feec3bac4ebcb91538a73499300aa0fd9d5ac3f53848aa0f3153dd6d9
+2026-07-08T09:08:38.093|INFO|CTL|cache.AgentAdmissionRequest: - allowed=true host=lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c id=66d2750feec3bac4ebcb91538a73499300aa0fd9d5ac3f53848aa0f3153dd6d9 online=0
+2026-07-08T09:08:38.267|INFO|CTL|cache.certObjectUpdate: sha256 - cert=30354fce7921c0ecf9e4cd71e59556426507c57de35eb404e89e3f96fedc61c9 svcName=rootCA
+2026-07-08T09:08:38.551|INFO|CTL|cache.certObjectUpdate: sha256 - cert=9ecd121699c402de5a4989cc4d125afc2088062825e56fd32033d4e6d1155512 svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:38.841|INFO|CTL|cache.certObjectUpdate: sha256 - cert=b741f614daa478b6bcc70c422fd4dcaae952c8ee6703abf7e8d9b5f7cd138684 svcName=neuvector-svc-crd-webhook
+2026-07-08T09:08:38.843|INFO|CTL|cache.fedConfigUpdate: - role=
+2026-07-08T09:08:38.843|INFO|CTL|scan.FedRoleChangeNotify: - fedRole=
+2026-07-08T09:08:38.844|INFO|CTL|cache.controllerUpdate: Add or update controller - controller={CLUSDevice:{ID:c2a71ff5655c836214b732062aa965343a60fcbf994d78de90a73af34ccc69cf Name:k8s_neuvector-controller-pod_neuvector-controller-pod-57f8b8578f-6wwtf_cattle-neuvector-system_9c4ea366-89ec-48af-8a9e-49eb2cd775b8_0 SelfHostname: HostName:lima-rancher-desktop HostID:lima-rancher-desktop:fe2c7e05-efa9-4c47-9170-8bd468bfccb8 Domain:cattle-neuvector-system NetworkMode:default PidMode: Ver:v5.5.3 Labels:map[app:neuvector-controller-pod io.kubernetes.container.name:neuvector-controller-pod io.kubernetes.pod.name:neuvector-controller-pod-57f8b8578f-6wwtf io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:9c4ea366-89ec-48af-8a9e-49eb2cd775b8 name:controller neuvector.role:controller pod-template-hash:57f8b8578f release: vendor:NeuVector Inc. version:] CreatedAt:2026-07-08 09:08:02.066434075 +0000 UTC StartedAt:2026-07-08 09:08:02.066434075 +0000 UTC JoinedAt:2026-07-08 09:08:29.289358296 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.121 RPCServerPort:18400 Pid:1 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.121 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]} Leader:true OrchConnStatus:connected OrchConnLastError: ReadPrimeConfig:true}
+2026-07-08T09:08:38.844|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=c2a71ff5655c836214b732062aa965343a60fcbf994d78de90a73af34ccc69cf ip=10.42.0.121
+2026-07-08T09:08:38.844|INFO|CTL|cache.addrDeviceAdd: - count=1
+2026-07-08T09:08:38.844|INFO|CTL|cache.connectControllerAdd: - id=c2a71ff5655c836214b732062aa965343a60fcbf994d78de90a73af34ccc69cf name=k8s_neuvector-controller-pod_neuvector-controller-pod-57f8b8578f-6wwtf_cattle-neuvector-system_9c4ea366-89ec-48af-8a9e-49eb2cd775b8_0
+2026-07-08T09:08:39.084|INFO|CTL|cache.hostUpdate: Add or update host - host={ID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Name:lima-rancher-desktop Runtime:docker Platform:Kubernetes Flavor:Rancher CloudPlatform: Network:Default RuntimeVer:29.1.3 RuntimeAPIVer:1.52 OS:Alpine Linux v3.23 Kernel:6.6.119-0-virt CPUs:8 Memory:25161457664 Ifaces:map[eth0:[{IPNet:{IP:192.168.5.15 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}] vznat:[{IPNet:{IP:192.168.64.4 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}]] TunnelIP:[{IP:10.42.0.0 Mask:ffffffff} {IP:10.42.0.1 Mask:ffffff00}] CapDockerBench:true CapKubeBench:true StorageDriver:overlayfs CgroupVersion:2}
+2026-07-08T09:08:39.098|INFO|CTL|cache.agentUpdate: Add or update enforcer - agent={CLUSDevice:{ID:66d2750feec3bac4ebcb91538a73499300aa0fd9d5ac3f53848aa0f3153dd6d9 Name:k8s_neuvector-enforcer-pod_neuvector-enforcer-pod-frv6l_cattle-neuvector-system_0a34a560-7e35-41d1-9575-60e1436e342e_0 SelfHostname:neuvector-enforcer-pod-frv6l HostName:lima-rancher-desktop HostID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Domain:cattle-neuvector-system NetworkMode:container:d32e5d9ae73d1ffd556ca22783e31a594f0e4f327869dc233f744b7fb1606e5d PidMode:host Ver:v5.5.3 Labels:map[annotation.io.kubernetes.container.hash:6ef9eca2 annotation.io.kubernetes.container.restartCount:0 annotation.io.kubernetes.container.terminationMessagePath:/dev/termination-log annotation.io.kubernetes.container.terminationMessagePolicy:File annotation.io.kubernetes.pod.terminationGracePeriod:1200 com.suse.bci.micro.authors:https://github.com/SUSE/bci/discussions com.suse.bci.micro.created:2026-06-11T12:36:50.331594000Z com.suse.bci.micro.description:A micro environment for containers based on the SUSE Linux Enterprise Base Container Image. com.suse.bci.micro.disturl:obs://build.suse.de/SUSE:SLE-15-SP7:Update:CR/containers/cd042e272e4e0cc1722c914df35368b7-micro-image com.suse.bci.micro.eula:sle-bci com.suse.bci.micro.lifecycle-url:https://www.suse.com/lifecycle#suse-linux-enterprise-server-15 com.suse.bci.micro.name:15.7-57.1 com.suse.bci.micro.reference:registry.suse.com/bci/bci-micro:15.7-57.1 com.suse.bci.micro.release-stage:released com.suse.bci.micro.source:https://sources.suse.com/SUSE:SLE-15-SP7:Update:CR/micro-image/cd042e272e4e0cc1722c914df35368b7/ com.suse.bci.micro.supportlevel:l3 com.suse.bci.micro.title:SLE BCI 15 SP7 Micro com.suse.bci.micro.until:2031-07-31 com.suse.bci.micro.url:https://www.suse.com/products/base-container-images/ com.suse.bci.micro.vendor:SUSE LLC com.suse.bci.micro.version:15.7-57.1 com.suse.eula:sle-bci com.suse.lifecycle-url:https://www.suse.com/lifecycle#suse-linux-enterprise-server-15 com.suse.release-stage:released com.suse.supportlevel:l3 com.suse.supportlevel.until:2031-07-31 io.artifacthub.package.logo-url:https://avatars2.githubusercontent.com/u/19367275 io.artifacthub.package.readme-url:https://raw.githubusercontent.com/neuvector/neuvector/v5.5.3/README.md io.kubernetes.container.logpath:/var/log/pods/cattle-neuvector-system_neuvector-enforcer-pod-frv6l_0a34a560-7e35-41d1-9575-60e1436e342e/neuvector-enforcer-pod/0.log io.kubernetes.container.name:neuvector-enforcer-pod io.kubernetes.docker.type:container io.kubernetes.pod.name:neuvector-enforcer-pod-frv6l io.kubernetes.pod.namespace:cattle-neuvector-system io.kubernetes.pod.uid:0a34a560-7e35-41d1-9575-60e1436e342e io.kubernetes.sandbox.id:d32e5d9ae73d1ffd556ca22783e31a594f0e4f327869dc233f744b7fb1606e5d name:enforcer neuvector.image:neuvector/enforcer neuvector.rev:5aa6d37 neuvector.role:enforcer org.openbuildservice.disturl:obs://build.suse.de/SUSE:SLE-15-SP7:Update:CR/containers/cd042e272e4e0cc1722c914df35368b7-micro-image org.opencontainers.image.authors:https://github.com/SUSE/bci/discussions org.opencontainers.image.created:2026-06-11T12:36:50.331594000Z org.opencontainers.image.description:SUSE Security Enforcer org.opencontainers.image.ref.name:15.7-57.1 org.opencontainers.image.source:https://github.com/neuvector/neuvector/ org.opencontainers.image.title:SUSE Security Enforcer org.opencontainers.image.url:https://www.suse.com/products/base-container-images/ org.opencontainers.image.vendor:SUSE LLC org.opencontainers.image.version:v5.5.3 org.opensuse.reference:neuvector/enforcer:v5.5.3 vendor:SUSE Security] CreatedAt:2026-07-08 09:07:59.610828407 +0000 UTC StartedAt:2026-07-08 09:07:59.656229574 +0000 UTC JoinedAt:2026-07-08 09:08:38.358149175 +0000 UTC MemoryLimit:0 CPUs: ClusterIP:10.42.0.120 RPCServerPort:18401 Pid:31350 Ifaces:map[eth0:[{IPNet:{IP:10.42.0.120 Mask:ffffff00} Gateway: Scope:global NetworkID: NetworkName:}]]}}
+2026-07-08T09:08:39.098|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=66d2750feec3bac4ebcb91538a73499300aa0fd9d5ac3f53848aa0f3153dd6d9 ip=10.42.0.120
+2026-07-08T09:08:39.098|INFO|CTL|cache.addrDeviceAdd: - count=2
+2026-07-08T09:08:39.098|INFO|CTL|cache.connectAgentAdd: - id=66d2750feec3bac4ebcb91538a73499300aa0fd9d5ac3f53848aa0f3153dd6d9 name=k8s_neuvector-enforcer-pod_neuvector-enforcer-pod-frv6l_cattle-neuvector-system_0a34a560-7e35-41d1-9575-60e1436e342e_0
+2026-07-08T09:08:39.231|INFO|CTL|rest.loadX509KeyPair: sha256 - cert=9ecd121699c402de5a4989cc4d125afc2088062825e56fd32033d4e6d1155512 svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:39.231|INFO|CTL|rest.k8sWebhookRestServer: Started Admission REST server - port=20443 svcName=neuvector-svc-admission-webhook
+2026-07-08T09:08:39.368|INFO|CTL|rest.initCertificates.func2: new certificate is loaded - cn=neuvector-jwt-signing newExpiryDate=2026-10-06 09:08:36 +0000 UTC oldExpiryDate=<nil>
+2026-07-08T09:08:49.219|INFO|CTL|cluster.StartCluster.func2: Lead check timer expired
+2026-07-08T09:08:49.22 |INFO|CTL|cluster.StartCluster.func2: Lead elected - lead=10.42.0.121:18300
+2026-07-08T09:08:54.253|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-scanner-pod-5d5d6449d4-q7854_cattle-neuvector-system_63d0caac-5dfd-4a43-aebc-521f7d968b0d_0
+2026-07-08T09:08:54.253|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=f7b4ef4ed39c51a1c114b2ecaafcf45b5b5fd2a074b0612a2c86c2fd8306951a ip=10.42.0.122
+2026-07-08T09:08:54.253|INFO|CTL|cache.addrDeviceAdd: - count=3
+2026-07-08T09:08:54.847|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:55.504|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:56.007|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-manager-pod-6b44896886-bs8ft_cattle-neuvector-system_75de9029-badf-409c-9576-0db3440d7d7e_0
+2026-07-08T09:08:56.007|INFO|CTL|cache.addrDeviceAdd: add ip-device map - id=14f3fbd2dfad8bdaf8b8a209faf232be41c413519389e83da79edba23c1df180 ip=10.42.0.119
+2026-07-08T09:08:56.007|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:08:56.146|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:56.371|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-enforcer-pod-frv6l_cattle-neuvector-system_0a34a560-7e35-41d1-9575-60e1436e342e_0
+2026-07-08T09:08:56.371|INFO|CTL|cache.addrDeviceAdd: renew ip-device map - id=d32e5d9ae73d1ffd556ca22783e31a594f0e4f327869dc233f744b7fb1606e5d ip=10.42.0.120
+2026-07-08T09:08:56.372|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:08:56.382|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_POD_neuvector-controller-pod-57f8b8578f-6wwtf_cattle-neuvector-system_9c4ea366-89ec-48af-8a9e-49eb2cd775b8_0
+2026-07-08T09:08:56.382|INFO|CTL|cache.addrDeviceAdd: renew ip-device map - id=c2a71ff5655c836214b732062aa965343a60fcbf994d78de90a73af34ccc69cf ip=10.42.0.121
+2026-07-08T09:08:56.382|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:08:56.871|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:57.589|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:58.424|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:59.047|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:59.731|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=32768
+2026-07-08T09:08:59.906|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive - entries=14359
+2026-07-08T09:08:59.908|INFO|CTL|main.(*ScanService).ScannerRegisterStream: Stream receive done
+2026-07-08T09:08:59.908|INFO|CTL|main.(*ScanService).scannerRegister: - create=2026-07-05T20:44:26Z entries=276503 id=10.42.0.122 server=10.42.0.122 version=4.217
+2026-07-08T09:09:01.501|INFO|CTL|cache.hostUpdate: Add or update host - host={ID:lima-rancher-desktop:15d92131-bc71-4545-9a2f-8badbc3ed93c Name:lima-rancher-desktop Runtime:docker Platform:Kubernetes Flavor:Rancher CloudPlatform: Network:Default RuntimeVer:29.1.3 RuntimeAPIVer:1.52 OS:Alpine Linux v3.23 Kernel:6.6.119-0-virt CPUs:8 Memory:25161457664 Ifaces:map[eth0:[{IPNet:{IP:192.168.5.15 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}] vznat:[{IPNet:{IP:192.168.64.4 Mask:ffffff00} Gateway: Scope:nat NetworkID: NetworkName:}]] TunnelIP:[{IP:10.42.0.1 Mask:ffffff00} {IP:10.42.0.0 Mask:ffffffff}] CapDockerBench:true CapKubeBench:true StorageDriver:overlayfs CgroupVersion:2}
+2026-07-08T09:09:01.705|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-controller-pod_neuvector-controller-pod-57f8b8578f-6wwtf_cattle-neuvector-system_9c4ea366-89ec-48af-8a9e-49eb2cd775b8_0
+2026-07-08T09:09:01.705|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:09:02.055|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-enforcer-pod_neuvector-enforcer-pod-frv6l_cattle-neuvector-system_0a34a560-7e35-41d1-9575-60e1436e342e_0
+2026-07-08T09:09:02.055|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:09:04.963|INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-manager-pod_neuvector-manager-pod-6b44896886-bs8ft_cattle-neuvector-system_75de9029-badf-409c-9576-0db3440d7d7e_0
+2026-07-08T09:09:04.963|INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:09:05.53 |INFO|CTL|cache.workloadUpdate: Add - NVcontainer=k8s_neuvector-scanner-pod_neuvector-scanner-pod-5d5d6449d4-q7854_cattle-neuvector-system_63d0caac-5dfd-4a43-aebc-521f7d968b0d_0
+2026-07-08T09:09:05.53 |INFO|CTL|cache.addrDeviceAdd: - count=4
+2026-07-08T09:09:12.779|INFO|CTL|main.(*ScanService).scannerRegister: CVE database written - cvedb=scan/database/4.217/
+2026-07-08T09:09:12.781|INFO|CTL|cache.ScannerUpdateHandler: Add or update scanner - scanner={ID:10.42.0.122 CVEDBVersion:4.217 CVEDBCreateTime:2026-07-05T20:44:26Z JoinedAt:2026-07-08 09:08:59.908114227 +0000 UTC RPCServer:10.42.0.122 RPCServerPort:18402 BuiltIn:false CVEDBEntries:276503 ScanCredit:2 MaxConcurrentScansPerScanner:2}
+2026-07-08T09:09:12.781|INFO|CTL|scan.AddScanner: - id=10.42.0.122
+2026-07-08T09:09:12.781|INFO|CTL|cache.ScannerUpdateHandler: Add or update scanner - scanner={ID:NeuVectorCVEDBVersion CVEDBVersion:4.217 CVEDBCreateTime:2026-07-05T20:44:26Z JoinedAt:0001-01-01 00:00:00 +0000 UTC RPCServer: RPCServerPort:0 BuiltIn:false CVEDBEntries:276503 ScanCredit:0 MaxConcurrentScansPerScanner:0}
+2026-07-08T09:09:22.194|INFO|CTL|cache.ScannerUpdateHandler: - cvedb=4.217 entries=382963
+2026-07-08T09:13:59.195|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-updater-pod sa=neuvector
+2026-07-08T09:13:59.212|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-enforcer-pod sa=neuvector
+2026-07-08T09:13:59.24 |INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-scanner-pod sa=neuvector
+2026-07-08T09:13:59.249|ERRO|CTL|resource.getNeuvectorSvcAccount: resource no found - err=kubernetes api: Failure 404 deployments.apps "neuvector-registry-adapter-pod" not found name=neuvector-registry-adapter-pod rt=deployment
+2026-07-08T09:13:59.256|INFO|CTL|resource.getNeuvectorSvcAccount: - name=neuvector-cert-upgrader-pod sa=neuvector

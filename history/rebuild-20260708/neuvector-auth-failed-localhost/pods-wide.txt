@@ -1,0 +1,6 @@
+NAME                                        READY   STATUS      RESTARTS   AGE     IP            NODE                   NOMINATED NODE   READINESS GATES
+neuvector-cert-upgrader-job-shrhp           0/1     Completed   0          25m     10.42.0.111   lima-rancher-desktop   <none>           <none>
+neuvector-controller-pod-67867bc77c-lwqd4   1/1     Running     0          8m32s   10.42.0.113   lima-rancher-desktop   <none>           <none>
+neuvector-enforcer-pod-jb4p6                1/1     Running     0          29m     10.42.0.101   lima-rancher-desktop   <none>           <none>
+neuvector-manager-pod-598d9ddd8b-dc4vv      1/1     Running     0          8m32s   10.42.0.114   lima-rancher-desktop   <none>           <none>
+neuvector-scanner-pod-5d5d6449d4-vgzxk      1/1     Running     0          29m     10.42.0.102   lima-rancher-desktop   <none>           <none>

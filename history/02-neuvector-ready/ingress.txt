@@ -1,0 +1,2 @@
+NAMESPACE       NAME      CLASS     HOSTS               ADDRESS        PORTS     AGE
+cattle-system   rancher   traefik   rancher.localhost   192.168.64.4   80, 443   65m
