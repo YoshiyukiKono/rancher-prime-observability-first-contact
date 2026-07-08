@@ -1,0 +1,4 @@
+*.local.yaml
+*.secret.yaml
+.env
+history/**/secrets/
