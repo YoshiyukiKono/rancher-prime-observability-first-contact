@@ -1,0 +1,28 @@
+NAMESPACE                   NAME                                                  READY   STATUS      RESTARTS       AGE
+cattle-capi-system          capi-controller-manager-7654f98879-wklgt              1/1     Running     0              5m54s
+cattle-fleet-local-system   fleet-agent-569cb6b598-wbbhd                          1/1     Running     0              6m24s
+cattle-fleet-system         fleet-controller-ccb9f59d-cpbfh                       3/3     Running     3 (7m6s ago)   7m42s
+cattle-fleet-system         gitjob-5c7c654564-7w5gt                               1/1     Running     3 (7m7s ago)   7m42s
+cattle-fleet-system         helmops-775ffb756c-flrrp                              1/1     Running     0              7m42s
+cattle-system               helm-operation-644pr                                  0/2     Completed   0              6m35s
+cattle-system               helm-operation-bfhbp                                  0/2     Completed   0              8m1s
+cattle-system               helm-operation-bv9vd                                  0/2     Completed   0              5m52s
+cattle-system               helm-operation-cmxgp                                  0/2     Completed   0              2m18s
+cattle-system               helm-operation-dbp2t                                  0/2     Completed   0              6m59s
+cattle-system               helm-operation-mlbvp                                  0/2     Completed   0              6m53s
+cattle-system               helm-operation-nttph                                  0/2     Completed   0              5m35s
+cattle-system               helm-operation-wps5n                                  0/2     Completed   0              6m22s
+cattle-system               rancher-5756d7477-v44kw                               1/1     Running     0              10m
+cattle-system               rancher-webhook-74b7bb7f8-5vhxr                       1/1     Running     0              6m50s
+cattle-system               system-upgrade-controller-54c465b8cb-xfbs8            1/1     Running     0              6m31s
+cattle-turtles-system       rancher-turtles-controller-manager-5fd864954c-7s2jh   1/1     Running     0              6m15s
+cert-manager                cert-manager-559776c68d-vglx4                         1/1     Running     0              10m
+cert-manager                cert-manager-cainjector-7cdf9b4bd8-4bt7n              1/1     Running     0              10m
+cert-manager                cert-manager-webhook-5f7fd7899-vq5cz                  1/1     Running     0              10m
+kube-system                 coredns-8b64bcf7c-q8pt2                               1/1     Running     1 (14m ago)    17m
+kube-system                 helm-install-traefik-crd-dd8jl                        0/1     Completed   0              17m
+kube-system                 helm-install-traefik-qjl9g                            0/1     Completed   1              17m
+kube-system                 local-path-provisioner-5d9d9885bc-z2k76               1/1     Running     1 (14m ago)    17m
+kube-system                 metrics-server-786d997795-rm6rd                       1/1     Running     1 (14m ago)    17m
+kube-system                 svclb-traefik-3f7606c3-c688j                          2/2     Running     2 (14m ago)    17m
+kube-system                 traefik-d98ccfdf6-jf28g                               1/1     Running     1 (14m ago)    17m
