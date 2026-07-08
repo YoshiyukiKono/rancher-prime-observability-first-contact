@@ -1,0 +1,159 @@
+Name:               lima-rancher-desktop
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=lima-rancher-desktop
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node.kubernetes.io/instance-type=k3s
+Annotations:        alpha.kubernetes.io/provided-node-ip: 192.168.5.15
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"56:f9:02:d2:e3:ad"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 192.168.64.4
+                    k3s.io/external-ip: 192.168.64.4
+                    k3s.io/hostname: lima-rancher-desktop
+                    k3s.io/internal-ip: 192.168.5.15
+                    k3s.io/node-args:
+                      ["server","--https-listen-port","6443","--node-ip","192.168.5.15","--flannel-iface","vznat","--node-external-ip","192.168.64.4","--docker"...
+                    k3s.io/node-config-hash: 4UVE4MBHX3BVVF4VANS3VXOYONDHYUMG64QXUEIMKJINL6NZCDNQ====
+                    k3s.io/node-env: {}
+                    management.cattle.io/pod-limits: {"cpu":"15970m","ephemeral-storage":"17Gi","memory":"24454Mi"}
+                    management.cattle.io/pod-requests: {"cpu":"6975m","ephemeral-storage":"13Mi","memory":"23801Mi","pods":"40"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 08 Jul 2026 16:21:02 +0900
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  lima-rancher-desktop
+  AcquireTime:     <unset>
+  RenewTime:       Wed, 08 Jul 2026 18:27:51 +0900
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Wed, 08 Jul 2026 18:27:33 +0900   Wed, 08 Jul 2026 16:21:02 +0900   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Wed, 08 Jul 2026 18:27:33 +0900   Wed, 08 Jul 2026 16:21:02 +0900   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Wed, 08 Jul 2026 18:27:33 +0900   Wed, 08 Jul 2026 16:21:02 +0900   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Wed, 08 Jul 2026 18:27:33 +0900   Wed, 08 Jul 2026 16:24:49 +0900   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.5.15
+  ExternalIP:  192.168.64.4
+  Hostname:    lima-rancher-desktop
+Capacity:
+  cpu:                8
+  ephemeral-storage:  102625208Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             24571736Ki
+  pods:               110
+Allocatable:
+  cpu:                8
+  ephemeral-storage:  99833802265
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             24571736Ki
+  pods:               110
+System Info:
+  Machine ID:                 110e091ce18bd3d7bd36a7306da0e43c
+  System UUID:                fe2c7e05-efa9-4c47-9170-8bd468bfccb8
+  Boot ID:                    c41db15b-5a1e-42e6-b5a1-616c78ec2b2c
+  Kernel Version:             6.6.119-0-virt
+  OS Image:                   Alpine Linux v3.23
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  docker://29.1.3
+  Kubelet Version:            v1.35.6+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.0.0/24
+PodCIDRs:                     10.42.0.0/24
+ProviderID:                   k3s://lima-rancher-desktop
+Non-terminated Pods:          (40 in total)
+  Namespace                   Name                                                               CPU Requests  CPU Limits   Memory Requests  Memory Limits  Age
+  ---------                   ----                                                               ------------  ----------   ---------------  -------------  ---
+  cattle-capi-system          capi-controller-manager-665fc47d9-kfhtf                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         72m
+  cattle-fleet-local-system   fleet-agent-57bf575f84-dw9w7                                       0 (0%)        0 (0%)       0 (0%)           0 (0%)         74m
+  cattle-fleet-system         fleet-controller-8c7954dfd-7hkcw                                   0 (0%)        0 (0%)       0 (0%)           0 (0%)         75m
+  cattle-fleet-system         gitjob-7ffc766868-7bjsk                                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         75m
+  cattle-fleet-system         helmops-7f67477dd7-zjg5n                                           0 (0%)        0 (0%)       0 (0%)           0 (0%)         75m
+  cattle-neuvector-system     neuvector-controller-pod-57f8b8578f-6wwtf                          0 (0%)        0 (0%)       0 (0%)           0 (0%)         20m
+  cattle-neuvector-system     neuvector-enforcer-pod-frv6l                                       0 (0%)        0 (0%)       0 (0%)           0 (0%)         20m
+  cattle-neuvector-system     neuvector-manager-pod-6b44896886-bs8ft                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         20m
+  cattle-neuvector-system     neuvector-scanner-pod-5d5d6449d4-q7854                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         20m
+  cattle-scc-system           rancher-scc-operator-d4946cb85-kdpvs                               0 (0%)        0 (0%)       0 (0%)           0 (0%)         75m
+  cattle-system               rancher-7464b75d-rclnx                                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         79m
+  cattle-system               rancher-webhook-84d879987d-mgwrn                                   0 (0%)        0 (0%)       0 (0%)           0 (0%)         75m
+  cattle-system               system-upgrade-controller-6d8b8567f8-sjgwr                         0 (0%)        0 (0%)       0 (0%)           0 (0%)         73m
+  cattle-turtles-system       rancher-turtles-controller-manager-57744d846f-z8twk                10m (0%)      500m (6%)    128Mi (0%)       600Mi (2%)     74m
+  cert-manager                cert-manager-559776c68d-vglx4                                      0 (0%)        0 (0%)       0 (0%)           0 (0%)         120m
+  cert-manager                cert-manager-cainjector-7cdf9b4bd8-4bt7n                           0 (0%)        0 (0%)       0 (0%)           0 (0%)         120m
+  cert-manager                cert-manager-webhook-5f7fd7899-vq5cz                               0 (0%)        0 (0%)       0 (0%)           0 (0%)         120m
+  kube-system                 coredns-8b64bcf7c-q8pt2                                            100m (1%)     0 (0%)       70Mi (0%)        170Mi (0%)     126m
+  kube-system                 local-path-provisioner-5d9d9885bc-z2k76                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         126m
+  kube-system                 metrics-server-786d997795-rm6rd                                    100m (1%)     0 (0%)       70Mi (0%)        0 (0%)         126m
+  kube-system                 svclb-traefik-3f7606c3-c688j                                       0 (0%)        0 (0%)       0 (0%)           0 (0%)         126m
+  kube-system                 traefik-d98ccfdf6-jf28g                                            0 (0%)        0 (0%)       0 (0%)           0 (0%)         126m
+  suse-observability          suse-observability-clickhouse-shard0-0                             550m (6%)     1100m (13%)  4346Mi (18%)     4346Mi (18%)   2m43s
+  suse-observability          suse-observability-correlate-cf85586c7-k2cfv                       500m (6%)     1 (12%)      1250Mi (5%)      1250Mi (5%)    2m43s
+  suse-observability          suse-observability-e2es-84cdcd47cc-5h79d                           50m (0%)      500m (6%)    512Mi (2%)       512Mi (2%)     2m43s
+  suse-observability          suse-observability-elasticsearch-master-0                          500m (6%)     1 (12%)      2500Mi (10%)     2500Mi (10%)   2m43s
+  suse-observability          suse-observability-hbase-stackgraph-0                              500m (6%)     1500m (18%)  2250Mi (9%)      2250Mi (9%)    2m43s
+  suse-observability          suse-observability-hbase-tephra-mono-0                             50m (0%)      100m (1%)    512Mi (2%)       512Mi (2%)     2m43s
+  suse-observability          suse-observability-kafka-0                                         1 (12%)       2600m (32%)  2348Mi (9%)      2348Mi (9%)    2m43s
+  suse-observability          suse-observability-kafkaup-operator-kafkaup-755458dcd4-cnd6z       25m (0%)      50m (0%)     32Mi (0%)        64Mi (0%)      2m43s
+  suse-observability          suse-observability-prometheus-elasticsearch-exporter-69b97htp4m    50m (0%)      50m (0%)     50Mi (0%)        50Mi (0%)      2m43s
+  suse-observability          suse-observability-rbac-agent-549c4dd7b9-52hcc                     50m (0%)      100m (1%)    25Mi (0%)        40Mi (0%)      2m43s
+  suse-observability          suse-observability-receiver-786567c4d-bsprk                        1 (12%)       2 (25%)      1000Mi (4%)      1000Mi (4%)    2m43s
+  suse-observability          suse-observability-router-84bf6b6fc9-4mh5n                         100m (1%)     100m (1%)    128Mi (0%)       128Mi (0%)     2m43s
+  suse-observability          suse-observability-s3proxy-59d7f9c655-ffjr9                        200m (2%)     1 (12%)      700Mi (2%)       700Mi (2%)     2m43s
+  suse-observability          suse-observability-server-55db764f96-t7z5l                         1500m (18%)   3 (37%)      5Gi (21%)        5Gi (21%)      2m43s
+  suse-observability          suse-observability-topic-create-08t182517-psxh5                    500m (6%)     1 (12%)      2000Mi (8%)      2000Mi (8%)    2m43s
+  suse-observability          suse-observability-ui-bc955bfc8-lck9g                              70m (0%)      70m (0%)     96Mi (0%)        96Mi (0%)      2m43s
+  suse-observability          suse-observability-workload-observer-0                             20m (0%)      50m (0%)     24Mi (0%)        128Mi (0%)     2m43s
+  suse-observability          suse-observability-zookeeper-0                                     100m (1%)     250m (3%)    640Mi (2%)       640Mi (2%)     2m43s
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests       Limits
+  --------           --------       ------
+  cpu                6975m (87%)    15970m (199%)
+  memory             23801Mi (99%)  24454Mi (101%)
+  ephemeral-storage  13Mi (0%)      17Gi (18%)
+  hugepages-1Gi      0 (0%)         0 (0%)
+  hugepages-2Mi      0 (0%)         0 (0%)
+  hugepages-32Mi     0 (0%)         0 (0%)
+  hugepages-64Ki     0 (0%)         0 (0%)
+Events:
+  Type    Reason                          Age   From                       Message
+  ----    ------                          ----  ----                       -------
+  Normal  CertificateExpirationOK         126m  k3s-cert-monitor           Node and Certificate Authority certificates managed by k3s are OK
+  Normal  RegisteredNode                  126m  node-controller            Node lima-rancher-desktop event: Registered Node lima-rancher-desktop in Controller
+  Normal  NodePasswordValidationComplete  126m  k3s-supervisor             Deferred node password secret validation complete
+  Normal  Synced                          126m  cloud-node-controller      Node synced successfully
+  Normal  CertificateExpirationOK         123m  k3s-cert-monitor           Node and Certificate Authority certificates managed by k3s are OK
+  Normal  RegisteredNode                  123m  node-controller            Node lima-rancher-desktop event: Registered Node lima-rancher-desktop in Controller
+  Normal  NodePasswordValidationComplete  123m  k3s-supervisor             Deferred node password secret validation complete
+  Normal  Starting                        116m  system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) starting leader election for cattle-system/system-upgrade-controller
+  Normal  Started                         116m  system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) running as cattle-system/system-upgrade-controller
+  Normal  CertificateExpirationOK         108m  k3s-cert-monitor           Node and Certificate Authority certificates managed by k3s are OK
+  Normal  RegisteredNode                  108m  node-controller            Node lima-rancher-desktop event: Registered Node lima-rancher-desktop in Controller
+  Normal  Starting                        108m  system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) starting leader election for cattle-system/system-upgrade-controller
+  Normal  NodePasswordValidationComplete  108m  k3s-supervisor             Deferred node password secret validation complete
+  Normal  Started                         108m  system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) running as cattle-system/system-upgrade-controller
+  Normal  Starting                        73m   system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) starting leader election for cattle-system/system-upgrade-controller
+  Normal  Started                         72m   system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) running as cattle-system/system-upgrade-controller
+  Normal  CertificateExpirationOK         64m   k3s-cert-monitor           Node and Certificate Authority certificates managed by k3s are OK
+  Normal  RegisteredNode                  64m   node-controller            Node lima-rancher-desktop event: Registered Node lima-rancher-desktop in Controller
+  Normal  NodePasswordValidationComplete  64m   k3s-supervisor             Deferred node password secret validation complete
+  Normal  Starting                        64m   system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) starting leader election for cattle-system/system-upgrade-controller
+  Normal  Started                         64m   system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) running as cattle-system/system-upgrade-controller
+  Normal  CertificateExpirationOK         11m   k3s-cert-monitor           Node and Certificate Authority certificates managed by k3s are OK
+  Normal  RegisteredNode                  11m   node-controller            Node lima-rancher-desktop event: Registered Node lima-rancher-desktop in Controller
+  Normal  NodePasswordValidationComplete  10m   k3s-supervisor             Deferred node password secret validation complete
+  Normal  Starting                        10m   system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) starting leader election for cattle-system/system-upgrade-controller
+  Normal  Started                         10m   system-upgrade-controller  system-upgrade-controller v0.19.1 (5a843e5) running as cattle-system/system-upgrade-controller

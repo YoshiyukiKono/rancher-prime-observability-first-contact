@@ -1,0 +1,2 @@
+NAME                 CLASS     HOSTS                     ADDRESS        PORTS     AGE
+suse-observability   traefik   observability.localhost   192.168.64.4   80, 443   83m
